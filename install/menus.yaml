@@ -1,0 +1,9 @@
+othercode-theme:
+  title: 'otherCode Theme'
+  description: 'Sample menu for otherCode theme.'
+
+  items:
+    othercode:
+      title: 'Home'
+      outline: home
+      home: 1

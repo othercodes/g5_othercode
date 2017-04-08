@@ -1,0 +1,11 @@
+default:
+  title: Default
+  preset: default
+
+home:
+  title: Home
+  preset: home
+
+blog:
+  title: Blog
+  preset: blog
