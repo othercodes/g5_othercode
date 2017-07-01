@@ -55,11 +55,17 @@
 // Navigation
 @import "othercode/sections/navigation";
 
+// Subnavigration
+@import "othercode/sections/subnavigation";
+
 // Main Nav
 @import "othercode/sections/mainnav";
 
 // Intro
 @import "othercode/sections/intro";
+
+// Showcase
+@import "othercode/sections/showcase";
 
 // Features
 @import "othercode/sections/features";
@@ -71,10 +77,10 @@
 @import "othercode/sections/above";
 
 // Testimonials
-@import "othercode/sections/testimonials";
+@import "othercode/sections/bottom";
 
 // Expanded
-@import "othercode/sections/expanded";
+@import "othercode/sections/below";
 
 // Main
 @import "othercode/sections/main";

@@ -1,0 +1,16 @@
+#g-below {
+  background: $below-background;
+  color: $below-text-color;
+  padding: $section-padding;
+
+  @include breakpoint(tablet-range) {
+    padding: 0;
+  }
+}
+
+@media print {
+  #g-below {
+    background: #fff !important;
+    color: #000 !important;
+  }
+}

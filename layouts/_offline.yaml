@@ -4,20 +4,18 @@ preset:
   name: _offline
   timestamp: 1457546202
 layout:
+  /header/: {  }
   /navigation/:
     -
-      - 'logo-9608 15'
+      - 'logo-9608 25'
       - 'spacer-spacer-6015 65'
       - 'social-3171 20'
-  /header/:
+  /subnavigation/: {  }
+  /intro/: {  }
+  /showcase/:
     -
       - custom-7185
-  /intro/: {  }
   /features/: {  }
-  /utility/: {  }
-  /above/: {  }
-  /testimonials/: {  }
-  /expanded/: {  }
   /container-main/:
     -
       -
@@ -29,45 +27,36 @@ layout:
       -
         'sidebar 25': {  }
   /footer/:
+  /copyright/:
     -
-      - 'logo-9571 10'
-      - 'copyright-1736 30'
-      - 'spacer-spacer-8094 45'
-      - 'totop-8670 15'
+      - 'copyright-1736 33'
+      - 'spacer-spacer-8094 34'
+      - 'totop-8670 33'
   /offcanvas/: {  }
 structure:
-  navigation:
-    type: section
-    attributes:
-      boxed: ''
   header:
     type: section
     subtype: header
     attributes:
       boxed: ''
       class: ''
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+  subnavigation:
+    type: section
+    attributes:
+      boxed: ''
   intro:
     type: section
     attributes:
       boxed: ''
+  showcase:
+    type: section
+    attributes:
+      boxed: ''
   features:
-    type: section
-    attributes:
-      boxed: ''
-  utility:
-    type: section
-    attributes:
-      boxed: ''
-      class: ''
-  above:
-    type: section
-    attributes:
-      boxed: ''
-  testimonials:
-    type: section
-    attributes:
-      boxed: ''
-  expanded:
     type: section
     attributes:
       boxed: ''
@@ -81,6 +70,11 @@ structure:
     attributes:
       boxed: ''
   footer:
+    type: section
+    subtype: footer
+    attributes:
+      boxed: ''
+  copyright:
     type: section
     subtype: footer
     attributes:

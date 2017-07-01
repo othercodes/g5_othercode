@@ -1,5 +1,5 @@
-name: Testimonials Styles
-description: Testimonials section styles for the otherCode theme
+name: Showcase Styles
+description: Showcase section styles for the otherCode theme
 type: section
 
 form:
@@ -12,7 +12,7 @@ form:
     background-image:
       type: input.imagepicker
       label: Background Image
-      default: 'gantry-media://testimonials/img01.jpg'
+      default: 'gantry-media://header/img01.jpg'
     background-overlay:
       type: select.select
       label: Background Overlay

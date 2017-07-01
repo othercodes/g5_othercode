@@ -1,6 +1,6 @@
-#g-navigation {
-  background: $navigation-background;
-  color: $navigation-text-color;
+#g-subnavigation {
+  background: $subnavigation-background;
+  color: $subnavigation-text-color;
   position: relative;
   z-index: 11;
 
@@ -11,12 +11,12 @@
 
   // Logo
   .g-logo {
-    color: $navigation-text-color;
+    color: $subnavigation-text-color;
     line-height: 2.8rem;
 
     &.g-logo-othercode {
       svg {
-        fill: $navigation-text-color;
+        fill: $subnavigation-text-color;
       }
     }
   }
@@ -48,10 +48,10 @@
   .g-main-nav {
     font-family: get-font-family($font-family-title);
     font-weight: $font-weight-bold;
-    line-height: $navigation-line-height;
+    line-height: $subnavigation-line-height;
 
     .g-toplevel {
-      line-height: ($navigation-line-height + 1.625);
+      line-height: ($subnavigation-line-height + 1.625);
 
       > li {
         margin: 0 0.5rem;
@@ -61,7 +61,7 @@
         }
 
         > .g-menu-item-container {
-          color: $navigation-text-color;
+          color: $subnavigation-text-color;
           padding: $content-padding/4 0;
 
           > .g-menu-item-content {
@@ -86,10 +86,10 @@
 
         &:hover {
           > .g-menu-item-container {
-            color: fadeout($navigation-text-color, 30%);
+            color: fadeout($subnavigation-text-color, 30%);
 
             > .g-selected {
-              color: fadeout($navigation-text-color, 30%);
+              color: fadeout($subnavigation-text-color, 30%);
             }
           }
         }
@@ -97,11 +97,11 @@
         &.active {
           > .g-menu-item-container {
             > .g-menu-item-content {
-              box-shadow: 0 2px 0 fadeout($navigation-text-color, 80%);
+              box-shadow: 0 2px 0 fadeout($subnavigation-text-color, 80%);
             }
 
             > .g-selected {
-              box-shadow: 0 2px 0 fadeout($navigation-text-color, 80%);
+              box-shadow: 0 2px 0 fadeout($subnavigation-text-color, 80%);
             }
           }
         }
@@ -109,8 +109,8 @@
     }
 
     .g-dropdown {
-      background: lighten($navigation-background, 2%);
-      border: 1px solid fadeout($navigation-text-color, 80%);
+      background: lighten($subnavigation-background, 2%);
+      border: 1px solid fadeout($subnavigation-text-color, 80%);
       border-radius: $border-radius;
 
       > .g-dropdown-column {
@@ -118,7 +118,7 @@
       }
 
       a {
-        color: $navigation-text-color;
+        color: $subnavigation-text-color;
 
         &:hover {
           color: $accent-color-1;;
@@ -138,19 +138,19 @@
       > li {
 
         > .g-menu-item-container {
-          color: $navigation-text-color;
+          color: $subnavigation-text-color;
 
           > .g-selected {
-            color: $navigation-text-color;
+            color: $subnavigation-text-color;
           }
         }
 
         &:not(:last-child) {
           > .g-menu-item-container {
-            border-bottom: 1px solid fadeout($navigation-text-color, 80%);
+            border-bottom: 1px solid fadeout($subnavigation-text-color, 80%);
 
             > .g-selected {
-              border-bottom: 1px solid fadeout($navigation-text-color, 80%);
+              border-bottom: 1px solid fadeout($subnavigation-text-color, 80%);
             }
           }
         }
@@ -203,7 +203,7 @@
 }
 
 @media print {
-  #g-navigation {
+  #g-subnavigation {
     background: #fff !important;
     color: #000 !important;
   }

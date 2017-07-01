@@ -1,6 +1,6 @@
 details:
   name: otherCode
-  version: '5.4.11'
+  version: '1.0.0'
   icon: paper-plane
   date: 'April  3, 2017'
   author:
@@ -110,17 +110,20 @@ admin:
       - accent
       - font
     section:
-      - navigation
       - header
+      - navigation
+      - subnavigation
+      - showcase
       - intro
       - features
       - utility
       - above
-      - testimonials
-      - expanded
       - main
       - sidebar
+      - below
+      - bottom
       - footer
+      - copyright
       - offcanvas
     configuration:
       - breakpoints

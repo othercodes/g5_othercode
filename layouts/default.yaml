@@ -6,8 +6,8 @@ preset:
 layout:
   /navigation/:
     -
-      - 'logo-9608 15'
-      - 'menu-6409 65'
+      - 'logo-9608 25'
+      - 'menu-6409 55'
       - 'social-3171 20'
   /header/: {  }
   /intro/: {  }

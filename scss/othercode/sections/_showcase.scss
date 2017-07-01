@@ -1,15 +1,15 @@
-#g-intro {
-  background: $intro-background;
-  color: $intro-text-color;
+#g-showcase {
+  background: $showcase-background;
+  color: $showcase-text-color;
   padding: $section-padding 0;
   position: relative;
   z-index: 10;
 
-  @if $intro-background-image {
-    background: url($intro-background-image) center center no-repeat;
+  @if $showcase-background-image {
+    background: url($showcase-background-image) center center no-repeat;
     background-size: cover;
 
-    @if $intro-background-overlay == 'enabled' {
+    @if $showcase-background-overlay == 'enabled' {
       &:before {
         position: absolute;
         width: 100%;
@@ -28,10 +28,10 @@
   }
 
   a {
-    color: fadeout($intro-text-color, 40%);
+    color: fadeout($showcase-text-color, 40%);
 
     &:hover {
-      color: fadeout($intro-text-color, 20%);
+      color: fadeout($showcase-text-color, 20%);
     }
   }
 
@@ -62,7 +62,7 @@
 }
 
 @media print {
-  #g-intro {
+  #g-header {
     background: #fff !important;
     color: #000 !important;
   }

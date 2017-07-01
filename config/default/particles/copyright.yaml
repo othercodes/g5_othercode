@@ -1,11 +1,11 @@
 enabled: '1'
 date:
-  start: '2016'
+  start: '2017'
   end: now
-owner: 'Gantry Framework'
+owner: 'otherCode'
 link: ''
 target: _blank
 additional:
-  text: 'Developed by RocketTheme exclusively<br />for Gantry 5.'
+  text: 'Developed by otherCode exclusively<br />for Gantry 5.'
 css:
   class: ''

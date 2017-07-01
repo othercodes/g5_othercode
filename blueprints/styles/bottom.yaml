@@ -1,5 +1,5 @@
-name: Expanded Styles
-description: Expanded section content styles for the otherCode theme
+name: Bottom Styles
+description: Bottom section styles for the otherCode theme
 type: section
 
 form:
@@ -8,7 +8,7 @@ form:
     background:
       type: input.colorpicker
       label: Background
-      default: "#ffffff"
+      default: "#f4f5f7"
     text-color:
       type: input.colorpicker
       label: Text
