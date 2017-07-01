@@ -13,9 +13,14 @@ items:
     icon: 'fa fa-github fa-fw'
     text: ''
     link: 'https://github.com/othercodes'
-    name: Facebook
+    name: GitHub
   -
     icon: 'fa fa-google-plus fa-fw'
     text: ''
     link: 'https://plus.google.com/+DavidUnaySantistebanDev'
     name: Google+
+  -
+    icon: 'fa fa-linkedin-square fa-fw'
+    text: ''
+    link: 'https://www.linkedin.com/in/david-unay-santisteban-62199310b/'
+    name: LinkedIn
