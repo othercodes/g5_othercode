@@ -2,7 +2,7 @@ version: 2
 preset:
   image: 'gantry-admin://images/layouts/default.png'
   name: default
-  timestamp: 1499035200
+  timestamp: 1499037807
 layout:
   /header/: {  }
   /navigation/:
@@ -26,8 +26,8 @@ layout:
   /footer/: {  }
   /copyright/:
     -
-      - 'logo-9571 25'
-      - 'copyright-1736 50'
+      - 'copyright-1736 25'
+      - 'spacer-spacer-7305 50'
       - 'totop-8670 25'
   /offcanvas/:
     -
@@ -66,14 +66,7 @@ structure:
     type: section
     attributes:
       boxed: ''
-  sidebar:
-    type: section
-    subtype: aside
-    attributes:
-      class: ''
-    block:
-      fixed: '1'
-  container-main:
+  main:
     attributes:
       boxed: ''
   below:
@@ -103,7 +96,5 @@ content:
   social-3171:
     block:
       class: g-social-header
-  logo-9571:
-    title: 'Logo / Image'
   totop-8670:
     title: 'To Top'

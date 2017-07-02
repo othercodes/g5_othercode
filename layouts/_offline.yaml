@@ -2,7 +2,7 @@ version: 2
 preset:
   image: 'gantry-admin://images/layouts/default.png'
   name: _offline
-  timestamp: 1498944689
+  timestamp: 1499037911
 layout:
   /header/: {  }
   /navigation/:
@@ -27,11 +27,7 @@ layout:
       -
         'sidebar 25': {  }
   /footer/: {  }
-  /copyright/:
-    -
-      - 'copyright-5014 40'
-      - 'spacer-spacer-4019 35'
-      - 'totop-9892 25'
+  copyright: {  }
   /offcanvas/: {  }
 structure:
   header:
@@ -58,9 +54,6 @@ structure:
     type: section
     attributes:
       boxed: ''
-  main:
-    type: section
-    subtype: main
   sidebar:
     type: section
     subtype: aside
@@ -73,9 +66,11 @@ structure:
   copyright:
     type: section
     subtype: footer
-    attributes:
-      boxed: ''
-      class: ''
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
   offcanvas:
     attributes:
       boxed: ''
@@ -89,18 +84,3 @@ content:
     title: 'Custom HTML'
     attributes:
       html: "<h2 class=\"g-title\">Offline</h2>\n<p>Sorry, We are Down for Maintenance.</p>"
-  copyright-5014:
-    inherit:
-      outline: default
-      include:
-        - attributes
-        - block
-      particle: copyright-1736
-  totop-9892:
-    title: 'To Top'
-    inherit:
-      outline: default
-      include:
-        - attributes
-        - block
-      particle: totop-8670
