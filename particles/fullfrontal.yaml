@@ -1,0 +1,65 @@
+name: Full Frontal Splash
+description: Displays the main full frontal presentation.
+type: particle
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable to the particles.
+      default: true
+
+    image:
+      type: input.imagepicker
+      label: Image
+      description: Select the main image.
+
+    video:
+      type: input.videopicker
+      label: Video
+      description: Select the main video (override the images.)
+
+    headline:
+      type: input.text
+      label: Headline
+      description: Customize the headline text.
+      placeholder: Enter headline
+
+    description:
+      type: textarea.textarea
+      label: Description
+      description: Customize the description.
+      placeholder: Enter short description
+
+    slide:
+      type: input.checkbox
+      label: Slide Arrow
+      description: Enable the arrow slide system.
+      default: false
+
+    bgfilter:
+      type: input.checkbox
+      label: Background Filter
+      description: Enable the background color filter (accent color 1)
+      default: true
+
+    link:
+      type: input.text
+      label: Link
+      description: Specify the link address.
+
+    linktext:
+      type: input.text
+      label: Link Text
+      description: Customize the link text.
+
+    contact:
+      type: input.checkbox
+      label: Enable Contact
+      description: Enable Contact form.
+
+    css.class:
+      type: input.text
+      label: Class
+      description: CSS class name for the particle.

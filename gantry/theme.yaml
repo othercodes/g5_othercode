@@ -4,9 +4,9 @@ details:
   icon: paper-plane
   date: 'April  3, 2017'
   author:
-    name: RocketTheme, LLC
-    email: support@rockettheme.com
-    link: http://www.rockettheme.com
+    name: otherCode
+    email: usantisteban@othercode.es
+    link: http://www.othercode.es
 
   documentation:
     link: http://docs.gantry.org/gantry5
@@ -15,9 +15,9 @@ details:
     link: https://gitter.im/gantry/gantry5
 
   updates:
-    link: http://updates.rockettheme.com/themes/othercode.yaml
+    link: http://updates.othercode.es/themes/othercode.yaml
 
-  copyright: (C) 2007 - 2016 RocketTheme, LLC. All rights reserved.
+  copyright: (C) 2007 - 2016 otherCode. All rights reserved.
   license: GPLv2
   description: otherCode Theme
   images:
@@ -58,6 +58,13 @@ configuration:
       400: 'gantry-theme://fonts/lato/lato-regular/lato-regular-webfont'
       200italic: 'gantry-theme://fonts/lato/lato-lightitalic/lato-lightitalic-webfont'
       200: 'gantry-theme://fonts/lato/lato-light/lato-light-webfont'
+    Roboto:
+      700italic: 'gantry-theme://fonts/roboto/roboto-bolditalic/roboto-bolditalic-webfont'
+      700: 'gantry-theme://fonts/roboto/roboto-bold/roboto-bold-webfont'
+      400italic: 'gantry-theme://fonts/roboto/roboto-italic/roboto-italic-webfont'
+      400: 'gantry-theme://fonts/roboto/roboto-regular/roboto-regular-webfont'
+    Walkway:
+      400: 'gantry-theme://fonts/walkway/walkway-bold-regular/walkway-bold-webfont'
 
   css:
     compiler: \Gantry\Component\Stylesheet\ScssCompiler

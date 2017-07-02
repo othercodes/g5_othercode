@@ -1,0 +1,80 @@
+preset1:
+  image: 'gantry-admin://images/preset1.png'
+  description: GANTRY5_PLATFORM_PRESET1
+  colors:
+    - '#2980b9'
+    - '#234264'
+  styles:
+    base:
+      background: '#ffffff'
+      text-color: '#444444'
+      border-color: '#e0e0e5'
+    accent:
+      color-1: '#2980b9'
+      color-2: '#234264'
+    font:
+      family-default: 'Roboto, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+      family-title: 'Walkway, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+    link:
+      regular: '#2980b9'
+      hover: '#234264'
+    header:
+      background: '#3b3b3b'
+      background-image: 'gantry-media://header/img01.jpg'
+      background-overlay: enabled
+      text-color: '#ffffff'
+    navigation:
+      background: '#3b3b3b'
+      text-color: '#ffffff'
+    subnavigation:
+      background: '#3b3b3b'
+      text-color: '#ffffff'
+    showcase:
+      background: '#6886a3'
+      background-image: 'gantry-media://testimonials/img01.jpg'
+      background-overlay: enabled
+      text-color: '#ffffff'
+    intro:
+      background: '#ffffff'
+      background-image: 'gantry-media://testimonials/img01.jpg'
+      background-overlay: enabled
+      text-color: '#444444'
+    features:
+      background: '#ffffff'
+      text-color: '#444444'
+    utility:
+      background: '#444444'
+      text-color: '#ffffff'
+    above:
+      background: '#ffffff'
+      text-color: '#444444'
+    main:
+      background: '#ffffff'
+      text-color: '#444444'
+    below:
+      background: '#ffffff'
+      text-color: '#444444'
+    bottom:
+      background: '#ffffff'
+      text-color: '#444444'
+    footer:
+      background: '#3b3b3b'
+      text-color: '#ffffff'
+    copyright:
+      background: '#312f38'
+      text-color: '#ffffff'
+    offcanvas:
+      background: '#2980b9'
+      text-color: '#ffffff'
+      toggle-color: '#234264'
+      toggle-visibility: '1'
+      width: 12rem
+    breakpoints:
+      large-desktop-container: 75rem
+      desktop-container: 60rem
+      tablet-container: 48rem
+      large-mobile-container: 30rem
+      mobile-menu-breakpoint: 48rem
+    menu:
+      col-width: 180px
+      animation: g-fade

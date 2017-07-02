@@ -1,0 +1,33 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    <div class="sample-content">
+        <div class="g-grid">
+            <div class="g-block">
+                <div class="g-content">
+                    {% if particle.image %}<img src="{{ url(particle.image) }}" class="logo-large" alt="{{ particle.headline|e }}" />{% endif %}
+                    {% if particle.headline %}<h2>{{ particle.headline|raw }}</h2>{% endif %}
+                    {% if particle.description %}
+                        <div class="sample-description" {% if particle.description %}style="width:{{ particle.fixedwidth|raw }};"{% endif %}>{{ particle.description|raw }}</div>
+                    {% endif %}
+                    {% if particle.linktext %}<p><a href="{{ particle.link|e }}" class="button">{{ particle.linktext|e }}</a></p>{% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="g-grid">
+            {% for sample in particle.samples %}
+                <div {% if sample.id %}id="{{ sample.id|e }}"{% endif %} class="g-block {{ sample.class }} {{ sample.variations }}">
+                    <div class="g-content">
+                        {% if sample.image %}<img src="{{ url(sample.image) }}" class="logo-large" alt="{{ sample.title|e }}" />{% endif %}
+                        {% if sample.icon %}<i class="{{ sample.icon }} sample-icons"></i>{% endif %}
+                        <h4>{{ sample.title|raw }}</h4>
+                        <div class="sample-sub-content">
+                            {{ sample.subtitle|raw }}
+                            {{ sample.description|raw }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

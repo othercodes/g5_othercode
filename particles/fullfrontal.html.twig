@@ -1,0 +1,77 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    <div class="full-frontal-splash{% if particle.slide %} filter{% endif %}">
+        <div class="g-grid">
+            <div class="g-block">
+                <div class="g-content">
+
+                    {% if particle.video %}
+                        <video autoplay loop muted>
+                            <source src="{{ url(particle.video) }}">
+                            Your browser does not support the video tag.
+                        </video>
+                    {% endif %}
+
+                    {% if particle.video %}
+                    <div class="overlay-video">
+                        {% endif %}
+
+                        <div class="wrapper">
+
+                            {% if particle.image %}
+                                <img src="{{ url(particle.image) }}" alt="{{ particle.headline|e }}"/>
+                            {% endif %}
+                            {% if particle.slide %}
+                        <img src="{{ url('gantry-media://full-frontal-splash/bottom-arrow.png') }}" class="buttom-arrow" alt="buttom-arrow">
+                            <div class="hidden-content">
+                                {% endif %}
+                                {% if particle.headline %}
+                                    <h2>{{ particle.headline|raw }}</h2>
+                                {% endif %}
+                                {% if particle.description %}
+                                    <div class="description">{{ particle.description|raw }}</div>{% endif %}
+                                {% if particle.linktext %}
+                                    <p><a href="{{ particle.link|e }}" class="button phantom">{{ particle.linktext|e }}</a></p>
+                                {% endif %}
+                                {% if particle.slide %}
+                            </div>
+                            {% endif %}
+                            {% if particle.contact %}
+                                <div class="contact-form">
+                                    <form enctype="multipart/form-data" method="post">
+                                        <div><input type="text" id="name" name="name" placeholder="Titulo" required/></div>
+                                        <div><input type="text" id="title" name="title" placeholder="Nombre" required/></div>
+                                        <div><input type="file" name="image" accept="image/*" required></div>
+                                        <div><input type="submit"></div>
+                                    </form>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        {% if particle.video %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var toggleClick = 0;
+        jQuery('.buttom-arrow').click(function () {
+            toggleClick += 1;
+            var finalHeight = 0;
+            var contentHeight = jQuery(".full-frontal-splash .g-content").height();
+            var hiddenContentHeight = jQuery(".full-frontal-splash .hidden-content").height() + 25;
+            if (toggleClick % 2) {
+                finalHeight = contentHeight + hiddenContentHeight;
+                jQuery(".full-frontal-splash .g-content").animate({height: finalHeight + "px"}, "slow");
+            } else {
+                finalHeight = contentHeight - hiddenContentHeight;
+                jQuery(".full-frontal-splash .g-content").animate({height: finalHeight + "px"}, "slow");
+            }
+        });
+    </script>
+{% endblock %}
+
+

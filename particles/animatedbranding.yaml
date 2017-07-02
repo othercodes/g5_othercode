@@ -1,0 +1,67 @@
+name: Animated Branding
+description: Displays the main logo/branding with animations.
+type: particle
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable to the particles.
+      default: true
+
+    imageone:
+      type: input.imagepicker
+      label: Image One
+      description: Select the main image.
+
+    textone:
+      type: input.text
+      label: Text One
+      description: Some text (Override the image one).
+
+    imagetwo:
+      type: input.imagepicker
+      label: Image Two
+      description: Select the main image.
+
+    texttwo:
+      type: input.text
+      label: Text Two
+      description: Some text (Override the image two).
+
+    imagethree:
+      type: input.imagepicker
+      label: Image Three
+      description: Select the main image.
+
+    textthree:
+      type: input.text
+      label: Text Three
+      description: Some text (Override the image three).
+
+    link:
+      type: input.text
+      label: Link to
+      description: Link to something.
+      default: '#'
+
+    linktext:
+      type: input.text
+      label: Link Text
+      description: Customize the link text.
+
+    scrollto:
+      type: input.text
+      label: Scroll to
+      description: Scroll to this DOM element.
+
+    overdelay:
+      type: input.colorpicker
+      label: Overdelay Color
+      default: "rgba(0, 0, 0, 0.5)"
+
+    class:
+      type: input.text
+      label: Class
+      description: CSS class name for the particle.

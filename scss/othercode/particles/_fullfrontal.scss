@@ -1,0 +1,131 @@
+.full-frontal-splash {
+  height: 100%;
+
+  &.filter {
+    background-color: transparentize($accent-color-1, 0.7);
+  }
+
+  .g-grid {
+    height: 100%;
+
+    .g-content {
+      min-height: 300px;
+      height: 300px;
+
+      video {
+        height: auto;
+        vertical-align: middle;
+        width: 100%;
+      }
+
+      .overlay-video {
+        background-color: transparentize($accent-color-1, 0.7);
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden; /* this is important */
+      }
+
+      .wrapper {
+        padding-top: 84px;
+        padding-bottom: 10px;
+        max-width: 33%;
+        margin-left: auto;
+        margin-right: auto;
+
+        h2 {
+          text-transform: uppercase;
+          font-size: 2rem;
+          font-weight: 500;
+          padding-top: 20px;
+          margin: 0 auto 10px auto;
+        }
+
+        .hidden-content {
+          position: relative;
+
+          .description {
+            margin-bottom: 30px;
+            line-height: 22px;
+            font-size: 1em;
+          }
+
+          .button.phantom {
+            font-weight: 700;
+            padding-left: 25px;
+            padding-right: 25px;
+            text-transform: uppercase;
+            border: 3px solid #fff !important;
+          }
+
+        }
+
+        // remove this after resize the icon
+        img {
+          width: 110px;
+        }
+
+        .buttom-arrow {
+          display: block;
+          width: 27px;
+          margin: 65px auto 20px auto;
+          cursor: pointer;
+
+        }
+
+        .contact-form {
+          margin-top: 20px;
+
+          input[type="text"], input[type="file"] {
+            margin-top: 5px;
+            border: solid 2px #1d252a;
+            color: #1d252a;
+            background: transparent;
+            width: 180px;
+            border-radius: 0;
+            text-align: center;
+          }
+          ::-webkit-input-placeholder {
+            color: #1d252a;
+          }
+
+          :-moz-placeholder { /* Firefox 18- */
+            color: #1d252a;
+          }
+
+          ::-moz-placeholder { /* Firefox 19+ */
+            color: #1d252a;
+          }
+
+          :-ms-input-placeholder {
+            color: #1d252a;
+          }
+          input[type="file"] {
+
+          }
+
+          input[type="submit"] {
+            color: #f4f3e6;
+            padding: 5px 10px;
+            margin-top: 15px;
+            border-radius: 0;
+            background: #1d252a;
+            border: solid 2px #1d252a;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.full-frontal-control {
+  display: none;
+}

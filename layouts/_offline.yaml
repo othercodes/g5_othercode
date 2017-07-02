@@ -2,14 +2,14 @@ version: 2
 preset:
   image: 'gantry-admin://images/layouts/default.png'
   name: _offline
-  timestamp: 1457546202
+  timestamp: 1498944689
 layout:
   /header/: {  }
   /navigation/:
     -
       - 'logo-9608 25'
-      - 'spacer-spacer-6015 65'
-      - 'social-3171 20'
+      - 'spacer-6015 50'
+      - 'social-3171 25'
   /subnavigation/: {  }
   /intro/: {  }
   /showcase/:
@@ -19,24 +19,22 @@ layout:
   /container-main/:
     -
       -
-        'mainbar 75':
+        'main 75':
           -
             - system-content-3997
           -
             - system-messages-9096
       -
         'sidebar 25': {  }
-  /footer/:
+  /footer/: {  }
   /copyright/:
     -
-      - 'copyright-1736 33'
-      - 'spacer-spacer-8094 34'
-      - 'totop-8670 33'
+      - 'copyright-5014 40'
+      - 'spacer-spacer-4019 35'
+      - 'totop-9892 25'
   /offcanvas/: {  }
 structure:
   header:
-    type: section
-    subtype: header
     attributes:
       boxed: ''
       class: ''
@@ -60,7 +58,7 @@ structure:
     type: section
     attributes:
       boxed: ''
-  mainbar:
+  main:
     type: section
     subtype: main
   sidebar:
@@ -70,8 +68,6 @@ structure:
     attributes:
       boxed: ''
   footer:
-    type: section
-    subtype: footer
     attributes:
       boxed: ''
   copyright:
@@ -79,6 +75,7 @@ structure:
     subtype: footer
     attributes:
       boxed: ''
+      class: ''
   offcanvas:
     attributes:
       boxed: ''
@@ -92,9 +89,18 @@ content:
     title: 'Custom HTML'
     attributes:
       html: "<h2 class=\"g-title\">Offline</h2>\n<p>Sorry, We are Down for Maintenance.</p>"
-  logo-9571:
-    title: 'Logo / Image'
-    attributes:
-      image: 'gantry-media://logo/logo-footer.svg'
-  totop-8670:
+  copyright-5014:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+      particle: copyright-1736
+  totop-9892:
     title: 'To Top'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+      particle: totop-8670

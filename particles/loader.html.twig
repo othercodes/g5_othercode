@@ -1,0 +1,25 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    {% set class=(particle.class ? 'class="'~ particle.class ~'"') %}
+
+    <div id="loading" {{ class|default('')|raw }}>
+
+        <div class="load-block">
+            {% if particle.svg is not empty %}
+                <div>{{ particle.svg|raw }}</div>
+            {% else %}
+                <div><img src="{{ url(particle.image) }}" alt="{{ particle.text }}"/></div>
+            {% endif %}
+
+            {% if particle.text %}
+                <div>{{ particle.text }}</div>
+            {% endif %}
+        </div>
+    </div>
+    <script>
+        jQuery(window).load(function () {
+            jQuery('#loading').fadeOut();
+        });
+    </script>
+{% endblock %}
