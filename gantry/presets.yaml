@@ -31,7 +31,7 @@ preset1:
       text-color: '#ffffff'
     showcase:
       background: '#6886a3'
-      background-image: 'gantry-media://testimonials/img01.jpg'
+      background-image: 'gantry-media://showcase/showcase-001.jpg'
       background-overlay: enabled
       text-color: '#ffffff'
     intro:
@@ -61,7 +61,7 @@ preset1:
       background: '#3b3b3b'
       text-color: '#ffffff'
     copyright:
-      background: '#312f38'
+      background: '#3b3b3b'
       text-color: '#ffffff'
     offcanvas:
       background: '#2980b9'
