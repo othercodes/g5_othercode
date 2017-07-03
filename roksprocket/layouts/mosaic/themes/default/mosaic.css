@@ -61,10 +61,10 @@
 .sprocket-mosaic-hovercontent span {display: none;}
 
 /* Load More */
-.sprocket-mosaic-loadmore {-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;user-select:none;margin:20px auto 0 auto;display:block;padding:5px;width:155px;height: 45px;}
+.sprocket-mosaic-loadmore {-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;user-select:none;margin:20px auto 0 auto;padding:15px;display:block;width:200px;}
 .sprocket-mosaic-loadmore.hide { display:none; }
 .sprocket-mosaic-loadmore {cursor: pointer;-webkit-backface-visibility: hidden;}
-.sprocket-mosaic-loadmore span {font-size:12px;text-transform:capitalize;display:block;line-height:1.95em;text-align: center;}
+.sprocket-mosaic-loadmore span {display:block;line-height:1.95em;text-align: center;}
 .sprocket-mosaic-loadmore .loadmore-info {font-size:10px;}
 .sprocket-mosaic-loadmore span strong {font-weight:normal;}
 .sprocket-mosaic-loadmore .loadmore-all {display: none;}
@@ -107,14 +107,3 @@
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
 }
-
-/* Custom stuff */
-.sprocket-mosaic-filter li, .sprocket-mosaic-order li {color: #ffffff;background: rgba(0, 0, 0, 0.5);opacity: 0.7;}
-.sprocket-mosaic-filter li.active, .sprocket-mosaic-order li.active {opacity: 1;}
-.sprocket-mosaic .sprocket-mosaic-tags li {color: #ffffff;background: rgba(0, 0, 0, 0.5);}
-.sprocket-mosaic-loadmore {color: #ffffff;background: rgba(0, 0, 0, 0.5);}
-.sprocket-mosaic-hover {background: rgba(0, 0, 0, 0.5);opacity: 0;visibility: hidden;}
-.sprocket-mosaic-image-container:hover .sprocket-mosaic-hover {opacity: 1;visibility: visible;}
-.sprocket-mosaic-hovercontent {color: #ffffff;opacity: 0;visibility: hidden;}
-.sprocket-mosaic-image-container:hover .sprocket-mosaic-hovercontent {opacity: 1;visibility: visible;}
-.sprocket-mosaic-hover, .sprocket-mosaic-hovercontent {-webkit-transition: opacity 0.1s ease-in;-moz-transition: opacity 0.1s ease-in;-o-transition: opacity 0.1s ease-in;-ms-transition: opacity 0.1s ease-in;transition: opacity 0.1s ease-in;}

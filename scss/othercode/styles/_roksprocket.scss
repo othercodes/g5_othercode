@@ -1,0 +1,57 @@
+// MOSAIC
+.sprocket-mosaic-loadmore {
+  color: $base-background;
+  background: $accent-color-1;
+  font-family: get-font-family($font-family-title);
+  font-weight: $font-weight-semibold;
+  font-size: $core-font-size - 0.2;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.sprocket-mosaic-filter li, .sprocket-mosaic-order li {
+  color: $base-background;
+  background: $accent-color-1;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.sprocket-mosaic-filter li.active, .sprocket-mosaic-order li.active {
+  opacity: 1;
+}
+
+.sprocket-mosaic .sprocket-mosaic-tags li {
+  color: $base-background;
+  background: $accent-color-1;
+  text-transform: uppercase;
+}
+
+.sprocket-mosaic-hover {
+  background: $accent-color-1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sprocket-mosaic-image-container:hover .sprocket-mosaic-hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sprocket-mosaic-hovercontent {
+  color: $base-background;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sprocket-mosaic-image-container:hover .sprocket-mosaic-hovercontent {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sprocket-mosaic-hover, .sprocket-mosaic-hovercontent {
+  -webkit-transition: opacity 0.1s ease-in;
+  -moz-transition: opacity 0.1s ease-in;
+  -o-transition: opacity 0.1s ease-in;
+  -ms-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
+}
