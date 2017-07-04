@@ -1,8 +1,8 @@
 details:
   name: otherCode
-  version: '1.0.0'
+  version: VERSION
   icon: paper-plane
-  date: 'April  3, 2017'
+  date: DATE
   author:
     name: otherCode
     email: usantisteban@othercode.es

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <extension version="3.4" type="template" client="site" method="upgrade">
     <name>g5_othercode</name>
-    <version>1.0.0</version>
-    <creationDate>April 8, 2017</creationDate>
+    <version>VERSION</version>
+    <creationDate>DATE</creationDate>
     <author>Unay Santisteban</author>
     <authorEmail>usantisteban@othercode.es</authorEmail>
     <authorUrl>http://www.othercode.es/</authorUrl>
