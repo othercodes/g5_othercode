@@ -295,3 +295,20 @@ $css_multipliers: 2, 3;
     width: auto;
   }
 }
+
+.quote-mode {
+
+  .quote-title {
+    font-size: 200%;
+    padding: 0 5%;
+    margin-top: 75px;
+    line-height: 50px;
+  }
+
+  .quote-author {
+    font-size: 1.2em;
+    line-height: 1.75em;
+    margin: 25px 0;
+  }
+
+}
