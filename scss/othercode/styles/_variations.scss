@@ -312,3 +312,24 @@ $css_multipliers: 2, 3;
   }
 
 }
+
+.parent-category-name:before,
+.category-name:before,
+.create:before,
+.modified:before,
+.published:before,
+.createdby:before,
+.hits:before {
+  font-family: FontAwesome;
+  margin-right: 2px;
+  text-shadow: none;
+}
+
+.published:before {
+  content: "\f017";
+}
+
+.createdby:before {
+  content: "\f040";
+}
+
