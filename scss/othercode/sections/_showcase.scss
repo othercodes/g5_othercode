@@ -9,6 +9,10 @@
     background: url($showcase-background-image) center center no-repeat;
     background-size: cover;
 
+    @if $showcase-background-parallax == 'enabled' {
+      background-attachment: fixed;
+    }
+
     @if $showcase-background-overlay == 'enabled' {
       &:before {
         position: absolute;

@@ -22,6 +22,15 @@ form:
       options:
         enabled: Enabled
         disabled: Disabled
+    background-parallax:
+      type: select.select
+      label: Parallax Effect
+      description: 'Enables the CSS based parallax effect.'
+      placeholder: 'Select...'
+      default: enabled
+      options:
+        enabled: Enabled
+        disabled: Disabled
     text-color:
       type: input.colorpicker
       label: Text

@@ -70,6 +70,7 @@
     -moz-border-radius: $border-radius;
     border-radius: $border-radius;
     margin: 0;
+    padding: 8px 0;
 
     > .active {
       color: $base-background;

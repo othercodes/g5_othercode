@@ -51,10 +51,10 @@ $css_multipliers: 2, 3;
 }
 
 // General
-.title1, .title2, .title-gradient, .title-outline {
+.title1, .title2, .title3, .title-gradient, .title-outline {
   .g-title {
     margin: -($content-padding) -($content-padding) 1.5rem -($content-padding);
-    padding: $content-margin 1rem;
+    padding: 0 1rem;
   }
 }
 
@@ -183,6 +183,52 @@ $css_multipliers: 2, 3;
     background: darken($box2-background, 10%);
   }
 }
+
+// Title 3
+.title3 {
+  .g-title {
+    background: $box3-background;
+    color: $white;
+  }
+}
+
+// Box 3
+.box3 {
+  &.moduletable, &.widget,
+  &.g-outer-box,
+  > .g-content {
+    background: $box3-background;
+  }
+
+  &.moduletable, &.widget,
+  > .g-content {
+    color: $white;
+  }
+
+  .button {
+    color: $white;
+
+    &:hover {
+      background: darken($box3-background, 15%);
+    }
+  }
+
+  a {
+    color: lighten($box3-background, 30%);
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+// Box 3, Title 3
+.box1.title3 {
+  .g-title {
+    background: darken($box3-background, 15%);
+  }
+}
+
 
 // Title Gradient
 .title-gradient {
