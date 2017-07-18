@@ -16,7 +16,8 @@ body {
 }
 
 body p {
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
+  line-height: 26px;
 
   &.h1 {
     font-size: $h1-font-size;
