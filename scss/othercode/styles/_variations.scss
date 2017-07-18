@@ -229,7 +229,6 @@ $css_multipliers: 2, 3;
   }
 }
 
-
 // Title Gradient
 .title-gradient {
   .g-title {
@@ -394,7 +393,185 @@ $css_multipliers: 2, 3;
 }
 
 .moduletable {
-  div.nocontent{
+  div.nocontent {
     display: none;
+  }
+}
+
+.about-extra-icon ul {
+  padding: 0;
+  margin-left: 0;
+
+  li {
+    display: inline-block;
+    float: left;
+    margin: 0 36px 10px 0;
+    width: 134px;
+    height: 134px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+
+    p {
+      color: #7e868e;
+      font-size: 16px;
+      text-align: center;
+      padding-top: 35px;
+      font-weight: 500;
+
+      i {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+.about-extra-icon-style2 ul {
+  padding: 0;
+  margin-left: 0;
+
+  li {
+    background-color: #f1f1f1;
+    display: inline-block;
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 90px;
+
+    p {
+      color: #7e868e;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 12px;
+      text-align: center;
+      margin: 0;
+
+      i {
+        font-size: 30px;
+      }
+
+    }
+  }
+}
+
+.white {
+  color: $white;
+}
+
+.black {
+  color: $black;
+}
+
+.silver {
+  color: #bdc3c7;
+}
+
+.flat-blue {
+  color: #2980b9;
+}
+
+.flat-blue2 {
+  color: #3498db;
+}
+
+.flat-green {
+  color: #27ae60;
+}
+
+.flat-green2 {
+  color: #16a085;
+}
+
+.flat-red {
+  color: #c0392b;
+}
+
+.flat-red2 {
+  color: #e74c3c;
+}
+
+.flat-yellow {
+  color: #f1c40f;
+}
+
+.flat-purple {
+  color: #8e44ad;
+}
+
+.flat-orange {
+  color: #e67e22;
+}
+
+.flat-orange2 {
+  color: #f39c12;
+}
+
+.laravel {
+  color: #f4645f;
+}
+
+.flat-bg {
+  .black {
+    color: #fff;
+    background: #000;
+  }
+  .flat-blue {
+    color: #fff;
+    background: #2980b9;
+  }
+  .flat-blue2 {
+    color: #fff;
+    background: #3498db;
+  }
+  .flat-green {
+    color: #fff;
+    background: #27ae60;
+  }
+  .flat-green2 {
+    color: #fff;
+    background: #16a085;
+  }
+  .flat-red {
+    color: #fff;
+    background: #c0392b;
+  }
+  .flat-red2 {
+    color: #fff;
+    background: #e74c3c;
+  }
+  .flat-yellow {
+    color: #fff;
+    background: #f1c40f;
+  }
+  .flat-purple {
+    color: #fff;
+    background: #8e44ad;
+  }
+  .flat-orange {
+    color: #fff;
+    background: #e67e22;
+  }
+  .flat-orange2 {
+    color: #fff;
+    background: #f39c12;
+  }
+  .silver {
+    color: #484848;
+    background: #bdc3c7;
+  }
+  .laravel {
+    color: #fff;
+    background: #f4645f;
+  }
+}
+
+.rt-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline;
+    margin: 1px;
+    padding: 5px 8px;
+    line-height: 40px;
+    background: rgba(0, 0, 0, 0.25);
   }
 }
