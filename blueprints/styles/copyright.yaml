@@ -13,3 +13,12 @@ form:
       type: input.colorpicker
       label: Text
       default: "#ffffff"
+    padding:
+      type: select.select
+      label: Padding
+      description: 'Enables the padding over this section.'
+      placeholder: 'Select...'
+      default: disabled
+      options:
+        enabled: Enabled
+        disabled: Disabled

@@ -1,7 +1,10 @@
 #g-copyright {
   background: $copyright-background;
   color: $copyright-text-color;
-  padding: $section-padding 0;
+
+  @if $copyright-padding == 'enabled' {
+    padding: $section-padding 0;
+  }
 
   .g-content {
     margin: $content-margin 0;
@@ -9,6 +12,8 @@
 
   // Copyright
   .g-copyright {
+
+    padding: 0.5rem 0;
 
     @include breakpoint(mobile-only) {
       text-align: center;

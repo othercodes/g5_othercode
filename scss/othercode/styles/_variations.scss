@@ -333,3 +333,22 @@ $css_multipliers: 2, 3;
   content: "\f040";
 }
 
+.title-tag {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-transform: none;
+  opacity: 0.5;
+}
+
+.title-large .g-title {
+  font-size: 2rem;
+  line-height: 39px;
+  text-transform: none;
+}
+
+.moduletable {
+  div.nocontent{
+    display: none;
+  }
+}

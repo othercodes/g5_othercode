@@ -1,6 +1,7 @@
 textarea, select[multiple=multiple] {
   background-color: white;
   border: 1px solid $base-border-color;
+  border-radius: $border-radius;
 
   &:hover {
     border-color: $border-color-hover;
@@ -25,6 +26,7 @@ fieldset.input {
 }
 
 #{$all-text-inputs} {
+  border-radius: $border-radius;
   background-color: white;
   vertical-align: middle;
   border: 1px solid $base-border-color;
