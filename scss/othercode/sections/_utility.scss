@@ -1,7 +1,10 @@
 #g-utility {
   background: $utility-background;
   color: $utility-text-color;
-  padding: $section-padding 0;
+
+  @if $utility-padding == 'enabled' {
+    padding: $section-padding 0;
+  }
 }
 
 @media print {

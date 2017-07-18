@@ -59,12 +59,15 @@
       }
     }
   }
+  .fp-showcase {
 
-  .g-title {
-    color: $base-background;
-    .title-tag {
+    .g-title {
       color: $base-background;
+      .title-tag {
+        color: $base-background;
+      }
     }
+
   }
 }
 
