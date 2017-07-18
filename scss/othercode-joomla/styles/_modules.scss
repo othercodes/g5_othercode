@@ -170,6 +170,30 @@
     }
   }
 
+  //categories
+
+  .categories-module {
+    border: none;
+
+    li {
+      border: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+
+      h3, h4, h5, h6 {
+        display: inline;
+      }
+
+      &:before {
+        content: "\f138";
+        font-family: FontAwesome;
+        margin-right: 10px;
+        display: inline;
+      }
+    }
+
+  }
+
   // Smart Search
   #mod-finder-searchform {
     input[type="text"] {
