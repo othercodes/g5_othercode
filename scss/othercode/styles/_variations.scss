@@ -369,11 +369,11 @@ $css_multipliers: 2, 3;
   margin-right: 2px;
   text-shadow: none;
 }
-
+/*
 .published:before {
   content: "\f017";
 }
-
+*/
 .createdby:before {
   content: "\f040";
 }
@@ -573,5 +573,18 @@ $css_multipliers: 2, 3;
     padding: 5px 8px;
     line-height: 40px;
     background: rgba(0, 0, 0, 0.25);
+  }
+}
+
+.heading-title {
+  width: 60%;
+  margin: auto !important;
+  .g-title:after {
+    background: $accent-color-1;
+    content: "";
+    display: block;
+    width: 25%;
+    height: 1px;
+    margin: auto;
   }
 }
