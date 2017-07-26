@@ -76,6 +76,10 @@ p.readmore {
   .item-image {
     margin-bottom: 10px;
     width: 100%;
+    img {
+      max-height: 400px;
+      width: 100%;
+    }
   }
 
   .items-more ol li a:before {

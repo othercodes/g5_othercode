@@ -33,7 +33,7 @@
 
       &:hover {
         color: fadeout($copyright-text-color, 40%);
-        box-shadow: 0 2px 0 fadeout($copyright-text-color, 80%);
+        //box-shadow: 0 2px 0 fadeout($copyright-text-color, 80%);
       }
     }
   }
