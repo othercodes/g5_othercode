@@ -1,0 +1,13 @@
+.oc-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 1px 5px 0;
+    padding: 0 8px;
+    line-height: 30px;
+    background: rgba(0, 0, 0, 0.25);
+  }
+}

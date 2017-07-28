@@ -1,0 +1,42 @@
+name: Tags
+description: Display a list of Tags.
+type: particle
+icon: fa-tags
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable icon menu particles.
+      default: true
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+
+    items:
+      type: collection.list
+      array: true
+      label: Tag Items
+      description: Create each label.
+      value: name
+      ajax: true
+
+      fields:
+        .text:
+          type: input.text
+          label: Title
+          description: Enter the title
+          defaul: "Text"
+        .color:
+          type: input.colorpicker
+          label: Text
+        .background:
+          type: input.colorpicker
+          label: Background
+        .class:
+          type: input.selectize
+          label: CSS Classes
+          description: CSS class name for the tag.
