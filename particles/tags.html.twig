@@ -5,7 +5,9 @@
     <div class="{{ particle.class|e }}">
         <ul class="oc-tags">
             {% for item in particle.items %}
-                <li{% if item.class %} class="{{ item.class }}"{% endif %}{% if item.background %} style="background-color:{{ item.background }};"{% endif %}>
+                <li{% if item.class %} class="{{ item.class }}"{% endif %}
+                        style="border:solid {{ particle.border.width }} {{ particle.border.color }};border-radius: {{ particle.border.radius }};{% if item.background %}background-color:{{ item.background }};{% endif %}"
+                >
                     <span{% if item.color %} style="color:{{ item.color }};"{% endif %}>
                         {% if item.text %}{{ item.text }}{% endif %}
                     </span>

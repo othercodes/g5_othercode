@@ -16,6 +16,21 @@ form:
       label: CSS Classes
       description: CSS class name for the particle.
 
+    border.color:
+      type: input.colorpicker
+      label: Border color
+      default: "rgba(0,0,0,0)"
+
+    border.width:
+      type: input.text
+      label: Border width
+      default: "0px"
+
+    border.radius:
+      type: input.text
+      label: Border radius
+      default: "0px"
+
     items:
       type: collection.list
       array: true
@@ -30,12 +45,17 @@ form:
           label: Title
           description: Enter the title
           defaul: "Text"
+
         .color:
           type: input.colorpicker
-          label: Text
+          label: Text Color
+          defaul: "#ffffff"
+
         .background:
           type: input.colorpicker
           label: Background
+          defaul: "#444444"
+
         .class:
           type: input.selectize
           label: CSS Classes
