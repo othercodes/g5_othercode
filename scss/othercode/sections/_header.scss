@@ -2,7 +2,6 @@
   background: $header-background;
   color: $header-text-color;
   padding: $section-padding 0;
-  position: relative;
   z-index: 10;
 
   @if $header-background-image {
