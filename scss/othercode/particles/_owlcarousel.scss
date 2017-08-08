@@ -377,7 +377,7 @@
       .g-owlcarousel-item-img:after {
         background-color: $accent-color-1;
         @include linear-gradient(40deg, $accent-color-1, $accent-color-2);
-        opacity: 0.9;
+        opacity: 0.4;
       }
     }
 
@@ -385,7 +385,7 @@
       .g-owlcarousel-item-img:after {
         background-color: $accent-color-2;
         @include linear-gradient(140deg, $accent-color-2, $accent-color-1);
-        opacity: 0.9;
+        opacity: 0.4;
       }
     }
   }
