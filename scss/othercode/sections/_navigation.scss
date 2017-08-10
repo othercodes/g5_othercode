@@ -1,9 +1,16 @@
 #g-navigation {
   background: $navigation-background;
   color: $navigation-text-color;
-  box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 11;
+
+  @if $navigation-dynamic-layout == 'enabled' {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    display: none;
+  }
 
   // Container
   .g-container {

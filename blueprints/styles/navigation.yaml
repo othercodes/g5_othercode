@@ -13,3 +13,12 @@ form:
       type: input.colorpicker
       label: Text
       default: "#ffffff"
+    dynamic-layout:
+      type: select.select
+      label: Dynamic Layout
+      description: 'Enables the hide on scroll feature.'
+      placeholder: 'Select...'
+      default: disabled
+      options:
+        enabled: Enabled
+        disabled: Disabled

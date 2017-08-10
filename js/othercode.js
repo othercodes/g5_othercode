@@ -1,12 +1,36 @@
 jQuery(document).ready(function () {
 
-    new WOW().init();
 
-    var anchors = document.querySelectorAll('[href*="#"]');
-    for (var i = 0, len = anchors.length; i < len; i++) {
-        var url = new RegExp(window.location.hostname + window.location.pathname);
-        if (!url.test(anchors[i].href)) continue;
-        anchors[i].setAttribute('data-scroll', true);
+    jQuery('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+
+        var target = this.hash;
+        var ID = jQuery(this).attr("id");
+
+        if (ID !== "g-totop") {
+
+            if (!target) {
+                target = ".site";
+            }
+
+            var $target = jQuery(target);
+            jQuery('html, body').stop().animate({'scrollTop': $target.offset().top}, 600, 'linear', function () {
+                if (target !== ".site") {
+                    window.location.hash = target;
+                }
+            });
+        }
+    });
+
+    var wow = new WOW().init();
+
+    if (jQuery('#g-navigation').css('position') === 'fixed') {
+        jQuery(window).scroll(function () {
+            if (jQuery(this).scrollTop() > 200) {
+                jQuery('#g-navigation').fadeIn(500);
+            } else {
+                jQuery('#g-navigation').fadeOut(500);
+            }
+        });
     }
-    
 });
