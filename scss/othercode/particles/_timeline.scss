@@ -1,28 +1,6 @@
-// layout - breakpoints
-$S: 320px;
-$M: 768px;
-$L: 1170px;
-
-// layout - media queries
-@mixin MQ($canvas) {
-  @if $canvas == S {
-    @media only screen and (min-width: $S) {
-      @content;
-    }
-  } @else if $canvas == M {
-    @media only screen and (min-width: $M) {
-      @content;
-    }
-  } @else if $canvas == L {
-    @media only screen and (min-width: $L) {
-      @content;
-    }
-  }
-}
-
-.cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+.cd-container {
   width: 90%;
-  max-width: $L; // breakpoints inside partials > _layout.scss
+  max-width: $breakpoints-large-desktop-container;
   margin: 0 auto;
   position: relative;
   padding: 2em 0;
@@ -43,7 +21,7 @@ $L: 1170px;
     background: $accent-color-1;
   }
 
-  @include MQ(L) {
+  @include breakpoint(large-desktop-range) {
     &::before {
       left: 50%;
       margin-left: -2px;
@@ -64,7 +42,7 @@ $L: 1170px;
     margin-bottom: 0;
   }
 
-  @include MQ(L) {
+  @include breakpoint(large-desktop-range) {
     &:first-child {
       margin-top: 0;
     }
@@ -101,7 +79,7 @@ $L: 1170px;
     margin-top: -12px;
   }
 
-  @include MQ(L) {
+  @include breakpoint(large-desktop-range) {
     width: 60px;
     height: 60px;
     left: 50%;
@@ -130,6 +108,10 @@ $L: 1170px;
     }
   }
 
+  div{
+    line-height: 1.5rem;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -141,13 +123,13 @@ $L: 1170px;
     border-right: 7px solid $off-white;
   }
 
-  @include MQ(M) {
+  @include breakpoint(tablet-range) {
     .cd-read-more {
       font-size: 50%;
     }
   }
 
-  @include MQ(L) {
+  @include breakpoint(large-desktop-range) {
     margin-left: 0;
     padding: 1.6em;
     width: 45%;

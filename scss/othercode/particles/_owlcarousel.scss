@@ -370,7 +370,7 @@
 // THEME PARTICLES STYLING
 
 .g-owlcarousel {
-  color: #eceeef;
+  color: $off-white;
 
   &.has-color-overlay {
     .owl-stage > .owl-item:nth-child(even) {
@@ -470,11 +470,15 @@
 }
 
 .g-owlcarousel-item-title {
-  font-family: get-font-family($font-family-default);
+  font-family: get-font-family($font-family-title);
   font-size: 3.5rem;
   line-height: 4rem;
   font-weight: $font-weight-medium;
   margin: ($content-margin * 2) ($content-margin * 2) $content-margin;
+
+  span {
+    color:transparentize($off-white, 50%);
+  }
 
   @include breakpoint(desktop-range) {
     font-size: 3rem;
@@ -525,6 +529,19 @@
 }
 
 .g-owlcarousel-item-button {
+
+  &.button-outline {
+    color: $off-white !important;
+    border-color: $off-white;
+    background: transparentize($off-white, 50%);
+    font-size: 1.2rem;
+    padding: 1rem 1.3rem;
+
+    &:hover, &:active {
+      color: $off-white;
+    }
+  }
+
   @include breakpoint(tablet-range) {
     padding: 1rem 2.625rem;
     font-size: $core-font-size - 0.4;
