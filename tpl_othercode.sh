@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 TEMPLATE=`pwd`
 
@@ -19,9 +19,12 @@ cd $TEMPLATE
 rm -rf $TEMPLATE/builds
 mkdir -p $TEMPLATE/builds/src
 
+echo "Copiyng files..."
 for file in $TEMPLATE/*
 do
-    [[ $file = $TEMPLATE/builds || $file = $TEMPLATE/.idea/ || $file = $TEMPLATE/.git || $file = $TEMPLATE/tpl_othercode.sh ]] && continue
+    if [ "$file" = "$TEMPLATE/builds" ] || [ "$file" = "$TEMPLATE/.idea/" ] || [ "$file" = "$TEMPLATE/.git" ] || [ "$file" = "$TEMPLATE/tpl_othercode.sh" ]; then
+        continue;
+    fi
     cp -r "$file" $TEMPLATE"/builds/src/"
 done
 
@@ -29,6 +32,6 @@ perl -pi -e 's/VERSION/'$VERSION'/g;s/DATE/'$DATE'/g' $TEMPLATE/builds/src/templ
 perl -pi -e 's/VERSION/'$VERSION'/g;s/DATE/'$DATE'/g' $TEMPLATE/builds/src/gantry/theme.yaml
 
 echo "Building zip package..."
-cd $TEMPLATE/builds/src && zip -r $TEMPLATE/builds/$EXTENSION.zip ./
+cd $TEMPLATE/builds/src && zip -rq $TEMPLATE/builds/$EXTENSION.zip ./
 
 echo "Done!"

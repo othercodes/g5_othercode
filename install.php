@@ -10,7 +10,7 @@
 
 defined('_JEXEC') or die;
 
-class G5_otherCodeInstallerScript
+class G5_HeliumInstallerScript
 {
     public $requiredGantryVersion = '5.4.0';
 
@@ -22,7 +22,7 @@ class G5_otherCodeInstallerScript
      */
     public function preflight($type, $parent)
     {
-        if ($type == 'uninstall') {
+        if ($type === 'uninstall') {
             return true;
         }
 
@@ -55,11 +55,17 @@ class G5_otherCodeInstallerScript
 
     /**
      * @param string $type
-     * @param object $parent
+     * @param JInstallerAdapterTemplate $parent
      * @throws Exception
      */
     public function postflight($type, $parent)
     {
+        // Delete previous jQuery overrides, those just break things.
+        $search = JPATH_ROOT . "/templates/{$parent->getName()}/js/jui";
+        if (JFolder::exists($search)) {
+            JFolder::delete($search);
+        }
+
         $installer = new Gantry\Framework\ThemeInstaller($parent);
         $installer->initialize();
 
