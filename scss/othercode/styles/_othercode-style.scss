@@ -37,8 +37,24 @@
       }
     }
 
-    // Header Section
-    #g-header {
+    // Intro Section
+    #g-intro {
+      padding-bottom: 0;
+
+      .g-content {
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+        .fp-intro {
+          p {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+
+    // Showcase Section
+    #g-showcase {
       text-align: center;
       padding: 0;
 
@@ -61,22 +77,6 @@
           &:hover, &:active, &:focus {
             background: fadeout($white, 50%);
             border-color: transparent;
-          }
-        }
-      }
-    }
-
-    // Intro Section
-    #g-intro {
-      padding-bottom: 0;
-
-      .g-content {
-        margin-bottom: 0;
-        padding-bottom: 0;
-
-        .fp-intro {
-          p {
-            margin-bottom: 2rem;
           }
         }
       }
