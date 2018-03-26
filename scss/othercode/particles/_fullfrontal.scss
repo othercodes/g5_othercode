@@ -40,12 +40,10 @@
         margin-left: auto;
         margin-right: auto;
 
-        h2 {
+        h3 {
           text-transform: uppercase;
-          font-size: 2rem;
+          font-size: 1.3rem;
           font-weight: 500;
-          padding-top: 20px;
-          margin: 0 auto 10px auto;
         }
 
         .hidden-content {
@@ -56,15 +54,17 @@
             line-height: 22px;
             font-size: 1em;
           }
+        }
 
-          .button.phantom {
+        a {
+          color: $showcase-text-color !important;
+          &.button {
             font-weight: 700;
             padding-left: 25px;
             padding-right: 25px;
             text-transform: uppercase;
             border: 3px solid #fff !important;
           }
-
         }
 
         // remove this after resize the icon
@@ -73,53 +73,36 @@
         }
 
         .buttom-arrow {
-          display: block;
-          width: 27px;
-          margin: 65px auto 20px auto;
+          width: 22px;
+          margin-top: -12px;
           cursor: pointer;
 
+          &.arrow-up {
+            -ms-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+          }
+          &.arrow-down {
+            -ms-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          &.arrow-left {
+            -ms-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+          }
+          &.arrow-right {
+            -ms-transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+          }
+
         }
+      }
 
-        .contact-form {
-          margin-top: 20px;
-
-          input[type="text"], input[type="file"] {
-            margin-top: 5px;
-            border: solid 2px #1d252a;
-            color: #1d252a;
-            background: transparent;
-            width: 180px;
-            border-radius: 0;
-            text-align: center;
-          }
-          ::-webkit-input-placeholder {
-            color: #1d252a;
-          }
-
-          :-moz-placeholder { /* Firefox 18- */
-            color: #1d252a;
-          }
-
-          ::-moz-placeholder { /* Firefox 19+ */
-            color: #1d252a;
-          }
-
-          :-ms-input-placeholder {
-            color: #1d252a;
-          }
-          input[type="file"] {
-
-          }
-
-          input[type="submit"] {
-            color: #f4f3e6;
-            padding: 5px 10px;
-            margin-top: 15px;
-            border-radius: 0;
-            background: #1d252a;
-            border: solid 2px #1d252a;
-          }
-        }
+      .button-action {
+        cursor: pointer;
       }
 
     }

@@ -1,5 +1,6 @@
 jQuery(document).ready(function () {
 
+    resizeBackground();
 
     jQuery('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
@@ -34,3 +35,13 @@ jQuery(document).ready(function () {
         });
     }
 });
+
+jQuery(window).resize(function () {
+    resizeBackground();
+});
+
+function resizeBackground() {
+    var fullScreen = jQuery('.full-screen');
+    fullScreen.css('width', jQuery(window).width());
+    fullScreen.css('height', jQuery(window).height());
+}

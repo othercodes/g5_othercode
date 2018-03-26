@@ -12,7 +12,7 @@ form:
     background-image:
       type: input.imagepicker
       label: Background Image
-      default: 'gantry-media://header/img01.jpg'
+      default: 'gantry-media://header/pexels-photo-373076.jpeg'
     background-overlay:
       type: select.select
       label: Background Overlay

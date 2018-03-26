@@ -40,26 +40,16 @@ form:
       label: Text Three
       description: Some text (Override the image three).
 
+    arrowimage:
+      type: input.imagepicker
+      label: Arrow Image
+      description: Select the arrow image.
+
     link:
       type: input.text
       label: Link to
       description: Link to something.
       default: '#'
-
-    linktext:
-      type: input.text
-      label: Link Text
-      description: Customize the link text.
-
-    scrollto:
-      type: input.text
-      label: Scroll to
-      description: Scroll to this DOM element.
-
-    overdelay:
-      type: input.colorpicker
-      label: Overdelay Color
-      default: "rgba(0, 0, 0, 0.5)"
 
     class:
       type: input.text
