@@ -22,7 +22,7 @@ mkdir -p $TEMPLATE/builds/src
 echo "Copiyng files..."
 for file in $TEMPLATE/*
 do
-    if [ "$file" = "$TEMPLATE/builds" ] || [ "$file" = "$TEMPLATE/.idea/" ] || [ "$file" = "$TEMPLATE/.git" ] || [ "$file" = "$TEMPLATE/tpl_othercode.sh" ]; then
+    if [ "$file" = "$TEMPLATE/builds" ] || [ "$file" = "$TEMPLATE/.idea/" ] || [ "$file" = "$TEMPLATE/.git" ] || [ "$file" = "$TEMPLATE/custom" ] || [ "$file" = "$TEMPLATE/tpl_othercode.sh" ]; then
         continue;
     fi
     cp -r "$file" $TEMPLATE"/builds/src/"

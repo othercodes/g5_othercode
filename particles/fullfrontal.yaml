@@ -38,6 +38,17 @@ form:
       description: Enable the arrow slide system.
       default: false
 
+    arroworientation:
+      type: select.select
+      label: Orientation
+      description: Arrow orientation (up, down, left and right)
+      default: down
+      options:
+        arrow-down: Down
+        arrow-left: left
+        arrow-up: Up
+        arrow-right: Right
+
     bgfilter:
       type: input.checkbox
       label: Background Filter
@@ -54,10 +65,22 @@ form:
       label: Link Text
       description: Customize the link text.
 
-    contact:
-      type: input.checkbox
-      label: Enable Contact
-      description: Enable Contact form.
+    sections:
+      type: collection.list
+      array: true
+      label: Section Items
+      description: Create each item to appear in the content row.
+      value: title
+      ajax: true
+
+      fields:
+        .name:
+          type: input.text
+          label: Unique section name
+
+        .element:
+          type: input.text
+          label: DOM Element
 
     css.class:
       type: input.text

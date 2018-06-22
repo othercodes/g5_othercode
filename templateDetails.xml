@@ -38,45 +38,14 @@
     </files>
 
     <positions>
-        <position>header-a</position>
-        <position>header-b</position>
-        <position>header-c</position>
-        <position>navigation-a</position>
-        <position>navigation-b</position>
-        <position>navigation-c</position>
-        <position>subnavigation-a</position>
-        <position>subnavigation-b</position>
-        <position>subnavigation-c</position>
-        <position>showcase-a</position>
-        <position>showcase-b</position>
-        <position>showcase-c</position>
-        <position>intro-a</position>
-        <position>intro-b</position>
-        <position>intro-c</position>
-        <position>features-a</position>
-        <position>features-b</position>
-        <position>features-c</position>
-        <position>utility-a</position>
-        <position>utility-b</position>
-        <position>utility-c</position>
         <position>above-a</position>
-        <position>above-b</position>
-        <position>above-c</position>
-        <position>main</position>
-        <position>sidebar</position>
-        <position>below-a</position>
-        <position>below-b</position>
-        <position>below-c</position>
-        <position>bottom-a</position>
-        <position>bottom-b</position>
-        <position>bottom-c</position>
-        <position>footer-a</position>
-        <position>footer-b</position>
-        <position>footer-c</position>
-        <position>copyright-a</position>
-        <position>copyright-b</position>
-        <position>copyright-c</position>
-        <position>offcanvas</position>
+        <position>breadcrumbs</position>
+        <position>debug</position>
+        <position>feature-a</position>
+        <position>feature-b</position>
+        <position>feature-c</position>
+        <position>feature-d</position>
+        <position>sidebar-a</position>
     </positions>
 
     <config>

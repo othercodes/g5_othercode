@@ -51,6 +51,29 @@ form:
       description: Link to something.
       default: '#'
 
+    float:
+      type: select.select
+      label: Float
+      description: The floating of the content.
+      placeholder: 'Select...'
+      default: center
+      options:
+          center: Center
+          left: Left
+          right: Right
+
+    randbackground:
+      type: input.checkbox
+      label: Random background
+      description: Get a random background from the 'images/backgrounds/home/' folder
+      default: true
+
+    filter.enable:
+      type: input.checkbox
+      label: Accent Filter
+      description: Enable the accent filter.
+      default: true
+
     class:
       type: input.text
       label: Class

@@ -1,9 +1,19 @@
-div[id*="animatedbranding-"] {
+.animated-branding {
   height: 100%;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  position: relative;
 
-  .animatedbranding {
+  .filter {
+
     height: 100%;
-    background-color: transparentize($accent-color-1, 0.7);
+
+    &.enabled {
+      background-color: transparentize($accent-color-1, 0.7);
+    }
+
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;
     -o-background-size: cover !important;
@@ -15,29 +25,20 @@ div[id*="animatedbranding-"] {
 
       .g-content {
 
-        &.nospace {
-          h1 {
-            margin-bottom: -30px;
-          }
-        }
-
         div.inner {
-
-          h1 {
-            font-size: 8em;
-            text-transform: uppercase;
-          }
-
-          top: 40%;
-          width: 100%;
+          top: 45%;
           height: 100%;
+          max-width: 50%;
           display: block;
-          position: absolute;
+          position: relative;
           margin: -120px auto 0 auto;
-
           @media all and (max-width: $breakpoints-large-mobile-container) {
             max-width: 75%;
             margin: -80px auto 0 auto;
+          }
+
+          img {
+            margin-bottom: 35px;
           }
 
           .main-bottom-arrow {
@@ -54,8 +55,28 @@ div[id*="animatedbranding-"] {
           }
         }
 
+        h1 {
+          font-size: 8em;
+          text-transform: uppercase;
+          margin-top: 60%;
+        }
+        &.afloat-left {
+          left: 30% !important;
+        }
+        &.afloat-right {
+          left: 80% !important;
+        }
+        &.afloat-center {
+          left: 50% !important;
+        }
+
+        &.nospace {
+          h1 {
+            margin-bottom: -30px;
+          }
+        }
       }
     }
   }
-}
 
+}

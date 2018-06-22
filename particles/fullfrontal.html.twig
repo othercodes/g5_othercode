@@ -22,30 +22,33 @@
                             {% if particle.image %}
                                 <img src="{{ url(particle.image) }}" alt="{{ particle.headline|e }}"/>
                             {% endif %}
-                            {% if particle.slide %}
-                        <img src="{{ url('gantry-media://full-frontal-splash/bottom-arrow.png') }}" class="buttom-arrow" alt="buttom-arrow">
-                            <div class="hidden-content">
+
+                            <h3 {% if not particle.link %}class="button-action"{% endif %}>
+
+                                {% if particle.link %}
+                                <a href="{{ particle.link|e }}">
+                                    {% endif %}
+
+                                    {% if particle.headline %}{{ particle.headline|raw }}{% else %}Servicios{% endif %}
+                                    <img src="{{ url('gantry-media://full-frontal-splash/bottom-arrow.png') }}"
+                                         class="buttom-arrow {{ particle.arroworientation|raw }} {% if particle.link %}button-action{% endif %}"
+                                         alt="buttom-arrow">
+
+                                    {% if particle.link %}
+                                </a>
                                 {% endif %}
-                                {% if particle.headline %}
-                                    <h2>{{ particle.headline|raw }}</h2>
+                            </h3>
+
+                            {% if particle.slide %}
+                            <div class="hidden-content">
                                 {% endif %}
                                 {% if particle.description %}
                                     <div class="description">{{ particle.description|raw }}</div>{% endif %}
                                 {% if particle.linktext %}
-                                    <p><a href="{{ particle.link|e }}" class="button phantom">{{ particle.linktext|e }}</a></p>
+                                    <p><a href="{{ particle.link|e }}" class="button">{{ particle.linktext|e }}</a></p>
                                 {% endif %}
                                 {% if particle.slide %}
                             </div>
-                            {% endif %}
-                            {% if particle.contact %}
-                                <div class="contact-form">
-                                    <form enctype="multipart/form-data" method="post">
-                                        <div><input type="text" id="name" name="name" placeholder="Titulo" required/></div>
-                                        <div><input type="text" id="title" name="title" placeholder="Nombre" required/></div>
-                                        <div><input type="file" name="image" accept="image/*" required></div>
-                                        <div><input type="submit"></div>
-                                    </form>
-                                </div>
                             {% endif %}
                         </div>
 
@@ -53,25 +56,39 @@
                     </div>
                     {% endif %}
                 </div>
+
             </div>
         </div>
     </div>
-    <script>
-        var toggleClick = 0;
-        jQuery('.buttom-arrow').click(function () {
-            toggleClick += 1;
-            var finalHeight = 0;
-            var contentHeight = jQuery(".full-frontal-splash .g-content").height();
-            var hiddenContentHeight = jQuery(".full-frontal-splash .hidden-content").height() + 25;
-            if (toggleClick % 2) {
-                finalHeight = contentHeight + hiddenContentHeight;
-                jQuery(".full-frontal-splash .g-content").animate({height: finalHeight + "px"}, "slow");
-            } else {
-                finalHeight = contentHeight - hiddenContentHeight;
-                jQuery(".full-frontal-splash .g-content").animate({height: finalHeight + "px"}, "slow");
-            }
-        });
-    </script>
+    {% if particle.slide %}
+        <script>
+            var toggleClick = 0;
+            jQuery('.button-action').click(function () {
+                toggleClick += 1;
+                var finalHeight = 0;
+                var contentHeight = jQuery(".full-frontal-splash .g-content").height();
+                var hiddenContentHeight = jQuery(".full-frontal-splash .hidden-content").height() + 25;
+                if (toggleClick % 2) {
+                    finalHeight = contentHeight + hiddenContentHeight;
+                    jQuery(".full-frontal-splash .g-content").animate({height: finalHeight + "px"}, "slow", function () {
+                        {% for section in particle.sections %}
+                        jQuery('{{ section.element }}.full-frontal-control').slideDown("slow", function () {
+                            {% endfor %}
+
+                            {% for section in particle.sections %} }); {% endfor %}
+                    });
+
+                } else {
+                    finalHeight = contentHeight - hiddenContentHeight;
+                    {% for section in particle.sections|reverse %}
+                    jQuery('{{ section.element }}.full-frontal-control').slideUp("slow", function () {
+                        {% endfor %}
+                        jQuery(".full-frontal-splash .g-content").animate({height: finalHeight + "px"}, "slow");
+                        {% for section in particle.sections %} }); {% endfor %}
+                }
+            });
+        </script>
+    {% endif %}
 {% endblock %}
 
 
