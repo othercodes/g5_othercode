@@ -161,6 +161,8 @@ table.table-bordered {
   vertical-align: middle;
   font-size: $core-font-size - 0.2;
   font-weight: $font-weight-regular;
+  border-radius: 0;
+  padding: 0.4em 1em;
 }
 
 .label-info,

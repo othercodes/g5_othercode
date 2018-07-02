@@ -370,13 +370,21 @@ $css_multipliers: 2, 3;
   text-shadow: none;
 }
 
-/*
+
 .published:before {
-  content: "\f017";
+  content: "\f073";
 }
-*/
+.modified:before {
+  content: "\f073";
+}
+.create:before {
+  content: "\f073";
+}
 .createdby:before {
   content: "\f040";
+}
+.category-name:before {
+  content: "\f07b";
 }
 
 .title-tag {

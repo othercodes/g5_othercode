@@ -26,7 +26,22 @@ $context = array(
 // Reset used outline configuration.
 unset($gantry['configuration']);
 
+$layout = '_error';
+
+/**
+ * Small operation to search layouts with the http status
+ * code as name, this allow us to create a outline named
+ * 404 so this outline will be displayed automatically on
+ * http 404 status instead of the normal error one.
+ */
+foreach ($gantry['outlines']->all() as $name => $title) {
+    if ($context['errorcode'] == $title) {
+        $layout = $name;
+        break;
+    }
+}
+
 // Render the page.
 echo $theme
-    ->setLayout('_error', true)
+    ->setLayout($layout, true)
     ->render('error.html.twig', $context);
