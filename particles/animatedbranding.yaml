@@ -10,40 +10,20 @@ form:
       description: Globally enable to the particles.
       default: true
 
-    imageone:
-      type: input.imagepicker
-      label: Image One
-      description: Select the main image.
-
-    textone:
+    title:
       type: input.text
-      label: Text One
-      description: Some text (Override the image one).
+      label: Title
+      description: Main title.
 
-    imagetwo:
-      type: input.imagepicker
-      label: Image Two
-      description: Select the main image.
-
-    texttwo:
+    slug:
       type: input.text
-      label: Text Two
-      description: Some text (Override the image two).
+      label: Slug
+      description: Slug for the title.
 
-    imagethree:
-      type: input.imagepicker
-      label: Image Three
-      description: Select the main image.
-
-    textthree:
-      type: input.text
-      label: Text Three
-      description: Some text (Override the image three).
-
-    arrowimage:
-      type: input.imagepicker
-      label: Arrow Image
-      description: Select the arrow image.
+    text:
+      type: textarea.textarea
+      label: Text
+      description: Some text.
 
     link:
       type: input.text
@@ -51,28 +31,11 @@ form:
       description: Link to something.
       default: '#'
 
-    float:
-      type: select.select
-      label: Float
-      description: The floating of the content.
-      placeholder: 'Select...'
-      default: center
-      options:
-          center: Center
-          left: Left
-          right: Right
-
-    randbackground:
-      type: input.checkbox
-      label: Random background
-      description: Get a random background from the 'images/backgrounds/home/' folder
-      default: true
-
     filter.enable:
       type: input.checkbox
       label: Accent Filter
       description: Enable the accent filter.
-      default: true
+      default: false
 
     class:
       type: input.text

@@ -38,6 +38,7 @@
 }
 
 .g-offcanvas-toggle {
+  position: fixed;
   font-size: 2rem;
   color: $offcanvas-toggle-color;
   width: 32px;
