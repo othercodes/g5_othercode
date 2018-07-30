@@ -15,13 +15,11 @@
                 <p class="wow fadeInUp visible-desktop" data-wow-delay="1.5s">{{ particle.text|raw }}</p>
             {% endif %}
 
-            <a href="{{ url(particle.link) }}">
-                <div class="main-bottom-arrow wow fadeInUp" data-wow-delay="2s"
-                     style="background-image: url({{ url(particle.arrowimage) }})"></div>
-            </a>
         </div>
-        <div class="mouse-icon">
-            <div class="wheel"></div>
-        </div>
+        <a href="#wheel">
+            <div class="mouse-icon">
+                <div id="wheel" class="wheel"></div>
+            </div>
+        </a>
     </div>
 {% endblock %}

@@ -25,7 +25,7 @@ jQuery(document).ready(function () {
             }
 
             var $target = jQuery(target);
-            jQuery('html, body').stop().animate({'scrollTop': $target.offset().top}, 600, 'linear', function () {
+            jQuery('html, body').stop().animate({'scrollTop': $target.offset().top}, 600, 'swing', function () {
                 if (target !== ".site") {
                     window.location.hash = target;
                 }
@@ -39,7 +39,7 @@ jQuery(document).ready(function () {
 
     if (jQuery('#g-navigation').css('position') === 'fixed') {
         jQuery(window).scroll(function () {
-            if (jQuery(this).scrollTop() > 200) {
+            if (jQuery(this).scrollTop() > (jQuery(window).height() - 100)) {
                 jQuery('#g-navigation').fadeIn(500);
             } else {
                 jQuery('#g-navigation').fadeOut(500);
