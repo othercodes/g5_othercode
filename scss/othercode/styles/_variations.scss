@@ -596,3 +596,15 @@ $css_multipliers: 2, 3;
 .addtoany_container {
   margin: 0.5rem 0;
 }
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

@@ -16,6 +16,7 @@ layout:
   /below/: {  }
   /bottom/: {  }
   /footer/: {  }
+  /maps/: { }
   copyright: {  }
   offcanvas: {  }
 structure:
@@ -67,6 +68,10 @@ structure:
     attributes:
       boxed: ''
   footer:
+    attributes:
+      boxed: ''
+  maps:
+    type: section
     attributes:
       boxed: ''
   copyright:

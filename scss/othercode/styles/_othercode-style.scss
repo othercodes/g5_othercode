@@ -3,7 +3,6 @@
     // Navigation Section
     #g-navigation {
       @include breakpoint(no-mobile) {
-        background: transparent;
 
         // Logo Particle
         .g-logo {
@@ -57,15 +56,6 @@
     #g-showcase {
       text-align: center;
       padding: 0;
-
-      @include breakpoint(no-mobile) {
-        margin-top: -9.5rem;
-        padding: 0;
-      }
-
-      @include breakpoint(large-mobile-range) {
-        padding-top: 2rem;
-      }
 
       // Button Outline
       .button {

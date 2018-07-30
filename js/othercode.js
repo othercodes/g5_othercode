@@ -6,7 +6,11 @@ jQuery(document).ready(function () {
         jQuery('.full-screen').height(jQuery(window).height());
     });
 
-    jQuery(window).enllax();
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+    } else {
+        jQuery(window).enllax();
+    }
 
     jQuery('a[href^="#"]').on('click', function (e) {
         e.preventDefault();

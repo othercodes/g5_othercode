@@ -86,6 +86,10 @@ configuration:
     gantry: 5.4.0
 
   block-variations:
+    Typography:
+      uppercase: Uppercase
+      lowercase: Lowercase
+      capitalize: Capitalize
     Title Variations:
       title1: Title 1
       title2: Title 2

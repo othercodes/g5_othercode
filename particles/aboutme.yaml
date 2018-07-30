@@ -21,7 +21,7 @@ form:
       description: The bio name.
 
     birth:
-      type: input.text
+      type: input.datetime
       label: Birthday
       description: Bio birthday.
 
@@ -52,12 +52,7 @@ form:
       description: Collection of hobbies.
       value: title
       ajax: true
-
       fields:
-        .icon:
-          type: input.icon
-          label: Icon
-
         .title:
           type: input.text
           label: Title
@@ -74,6 +69,66 @@ form:
           description: Enter CSS class names.
           default:
 
-        .variations:
-          type: input.block-variations
-          label: Variations
+    summaries:
+     type: collection.list
+     array: true
+     label: Summaries
+     description: Summaries about expertice and interests.
+     value: title
+     ajax: true
+     fields:
+       .icon:
+         type: input.icon
+         label: Icon
+
+       .title:
+         type: input.text
+         label: Title
+
+       .content:
+         type: textarea.textarea
+         label: Content
+
+       .id:
+         type: input.text
+         label: CSS ID
+         description: Enter the ID for the block without the hash (#) (ie. <code>your-id</code>. You can then reference the element via CSS as <code>#your-id</code>
+         default:
+
+       .class:
+         type: input.selectize
+         label: CSS Classes
+         description: Enter CSS class names.
+         default:
+
+     contact.link:
+       type: input.text
+       label: Contact link
+       description: Globally enable to the particles.
+
+     cv.link:
+       type: input.text
+       label: CV link
+       description: Globally enable to the particles.
+
+    contact.link:
+     type: input.text
+     label: Contact Link
+     description: Link to contact form.
+
+    cv.link:
+     type: input.text
+     label: CV Link
+     description: Link to CV.
+
+    id:
+     type: input.text
+     label: CSS ID
+     description: Enter the ID for the block without the hash (#) (ie. <code>your-id</code>. You can then reference the element via CSS as <code>#your-id</code>
+     default:
+
+    class:
+     type: input.selectize
+     label: CSS Classes
+     description: Enter CSS class names.
+     default:
