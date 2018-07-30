@@ -1,45 +1,27 @@
 {% extends '@nucleus/partials/particle.html.twig' %}
 
 {% block particle %}
-    <div class="animated-branding"{% if particle.randbackground %}
-        style="background-image: url({{ gantry.AnimatedBranding.getBackground() }});"
-            {% endif %}>
-        <div class="filter{% if particle.filter.enable %} enabled{% endif %}">
-            <div class="g-grid">
-                <div class="g-block">
-                    <div class="g-content {{ particle.class }} {% if particle.float %}afloat-{{ particle.float }}{% endif %}">
-                        <div class="inner">
-                            {% if particle.textone %}
-                                <h1 class="wow fadeInUp" data-wow-delay="0.5s">{{ particle.textone|raw }}</h1>
-                            {% else %}
-                                {% if particle.imageone %}
-                                    <img src="{{ url(particle.imageone) }}" class="wow fadeInUp" data-wow-delay="0.5s"/>
-                                {% endif %}
-                            {% endif %}
+    <div class="animated-branding {% if particle.filter.enable %} filter{% endif %}">
+        <div class="intro">
+            {% if particle.title %}
+                <h1 class="wow fadeInUp" data-wow-delay="0.5s">{{ particle.title|raw }}</h1>
+            {% endif %}
 
-                            {% if particle.texttwo %}
-                                <h2 class="wow fadeInUp" data-wow-delay="1s"><em>{{ particle.texttwo|raw }}</em></h2>
-                            {% else %}
-                                {% if particle.imagetwo %}
-                                    <img src="{{ url(particle.imagetwo) }}" class="wow fadeInUp" data-wow-delay="1s"/>
-                                {% endif %}
-                            {% endif %}
-                            {% if particle.textthree %}
-                                <h3 class="wow fadeInUp" data-wow-delay="1.5s">{{ particle.textthree|raw }}</h3>
-                            {% else %}
-                                {% if particle.imagethree %}
-                                    <img src="{{ url(particle.imagethree) }}" class="wow fadeInUp"
-                                         data-wow-delay="1.5s"/>
-                                {% endif %}
-                            {% endif %}
-                            <a href="{{ url(particle.link) }}">
-                                <div class="main-bottom-arrow wow fadeInUp" data-wow-delay="2s"
-                                     style="background-image: url({{ url(particle.arrowimage) }})"></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% if particle.slug %}
+                <h2 class="wow fadeInUp" data-wow-delay="1s">{{ particle.slug|raw }}</h2>
+            {% endif %}
+
+            {% if particle.text %}
+                <p class="wow fadeInUp visible-desktop" data-wow-delay="1.5s">{{ particle.text|raw }}</p>
+            {% endif %}
+
+            <a href="{{ url(particle.link) }}">
+                <div class="main-bottom-arrow wow fadeInUp" data-wow-delay="2s"
+                     style="background-image: url({{ url(particle.arrowimage) }})"></div>
+            </a>
+        </div>
+        <div class="mouse-icon">
+            <div class="wheel"></div>
         </div>
     </div>
 {% endblock %}

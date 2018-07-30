@@ -18,6 +18,10 @@ h1 {
   font-weight: $font-weight-bold;
 }
 
+h2 > span {
+  color: $accent-color-1;
+}
+
 h4 {
   font-size: $h4-font-size;
 }

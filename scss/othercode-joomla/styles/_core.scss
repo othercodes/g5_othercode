@@ -37,9 +37,15 @@
 // Buttons
 .btn {
   border-radius: $core-border-radius;
-  border: 0;
   color: $base-text-color;
   box-shadow: none;
+  line-height: 1.15;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  text-shadow: none;
+  padding: 15px;
 
   span {
     padding: 0;
@@ -51,26 +57,93 @@
   margin: 0.5rem 0;
 }
 
-.btn {
-  padding: 15px;
+.btn-default {
+  font-family: get-font-family($font-family-title);
+  font-weight: $font-weight-semibold;
+  font-size: $core-font-size - 0.2;
+  background: $base-text-color;
+  color: $white;
+  @include transition(all 0.2s);
+  &:hover, &:active, &:focus {
+    background: darken($base-text-color, 10%);
+    color: $white;
+  }
 }
 
 .btn-primary {
   font-family: get-font-family($font-family-title);
   font-weight: $font-weight-semibold;
   font-size: $core-font-size - 0.2;
-  line-height: 1.15;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
   background: $accent-color-1;
   color: $white;
-  border: 1px solid transparent;
-  vertical-align: middle;
-  text-shadow: none;
   @include transition(all 0.2s);
-
   &:hover, &:active, &:focus {
     background: darken($accent-color-1, 10%);
+    color: $white;
+  }
+}
+
+.btn-secondary {
+  font-family: get-font-family($font-family-title);
+  font-weight: $font-weight-semibold;
+  font-size: $core-font-size - 0.2;
+  background: $accent-color-2;
+  color: $white;
+  @include transition(all 0.2s);
+  &:hover, &:active, &:focus {
+    background: darken($accent-color-2, 10%);
+    color: $white;
+  }
+}
+
+.btn-info {
+  font-family: get-font-family($font-family-title);
+  font-weight: $font-weight-semibold;
+  font-size: $core-font-size - 0.2;
+  background: $info-color;
+  color: $white;
+  @include transition(all 0.2s);
+  &:hover, &:active, &:focus {
+    background: darken($info-color, 10%);
+    color: $white;
+  }
+}
+
+.btn-success {
+  font-family: get-font-family($font-family-title);
+  font-weight: $font-weight-semibold;
+  font-size: $core-font-size - 0.2;
+  background: $success-color;
+  color: $white;
+  @include transition(all 0.2s);
+  &:hover, &:active, &:focus {
+    background: darken($success-color, 10%);
+    color: $white;
+  }
+}
+
+.btn-warning {
+  font-family: get-font-family($font-family-title);
+  font-weight: $font-weight-semibold;
+  font-size: $core-font-size - 0.2;
+  background: $warning-color;
+  color: $white;
+  @include transition(all 0.2s);
+  &:hover, &:active, &:focus {
+    background: darken($warning-color, 10%);
+    color: $white;
+  }
+}
+
+.btn-danger {
+  font-family: get-font-family($font-family-title);
+  font-weight: $font-weight-semibold;
+  font-size: $core-font-size - 0.2;
+  background: $error-color;
+  color: $white;
+  @include transition(all 0.2s);
+  &:hover, &:active, &:focus {
+    background: darken($error-color, 10%);
     color: $white;
   }
 }
@@ -161,6 +234,8 @@ table.table-bordered {
   vertical-align: middle;
   font-size: $core-font-size - 0.2;
   font-weight: $font-weight-regular;
+  border-radius: 0;
+  padding: 0.4em 1em;
 }
 
 .label-info,

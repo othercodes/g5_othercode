@@ -1,6 +1,16 @@
 jQuery(document).ready(function () {
 
-    resizeBackground();
+    jQuery('.full-screen').height(jQuery(window).height());
+
+    jQuery(window).resize(function () {
+        jQuery('.full-screen').height(jQuery(window).height());
+    });
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+    } else {
+        jQuery(window).enllax();
+    }
 
     jQuery('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
@@ -23,7 +33,9 @@ jQuery(document).ready(function () {
         }
     });
 
-    var wow = new WOW().init();
+    new WOW({
+        mobile: false
+    }).init();
 
     if (jQuery('#g-navigation').css('position') === 'fixed') {
         jQuery(window).scroll(function () {
@@ -36,12 +48,3 @@ jQuery(document).ready(function () {
     }
 });
 
-jQuery(window).resize(function () {
-    resizeBackground();
-});
-
-function resizeBackground() {
-    var fullScreen = jQuery('.full-screen');
-    fullScreen.css('width', jQuery(window).width());
-    fullScreen.css('height', jQuery(window).height());
-}

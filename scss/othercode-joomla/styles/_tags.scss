@@ -19,3 +19,7 @@
         color: $base-text-color !important;
     }
 }
+
+.tags.inline > li, ol.inline > li {
+    padding: 0;
+}

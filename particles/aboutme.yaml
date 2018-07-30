@@ -1,0 +1,134 @@
+name: About me
+description: Displays a "about me" section.
+type: particle
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable to the particles.
+      default: true
+
+    photo:
+      type: input.imagepicker
+      label: Photo
+      description: Select the main image.
+
+    name:
+      type: input.text
+      label: Name
+      description: The bio name.
+
+    birth:
+      type: input.datetime
+      label: Birthday
+      description: Bio birthday.
+
+    address:
+      type: textarea.textarea
+      label: Address
+      description: Address.
+
+    phone:
+      type: input.text
+      label: Phone number
+      description: Bio phone number.
+
+    email:
+      type: input.text
+      label: Email
+      description: Bio email.
+
+    bio:
+      type: textarea.textarea
+      label: Biography
+      description: Biography text.
+
+    hobbies:
+      type: collection.list
+      array: true
+      label: Hobbies
+      description: Collection of hobbies.
+      value: title
+      ajax: true
+      fields:
+        .title:
+          type: input.text
+          label: Title
+
+        .id:
+          type: input.text
+          label: CSS ID
+          description: Enter the ID for the block without the hash (#) (ie. <code>your-id</code>. You can then reference the element via CSS as <code>#your-id</code>
+          default:
+
+        .class:
+          type: input.selectize
+          label: CSS Classes
+          description: Enter CSS class names.
+          default:
+
+    summaries:
+     type: collection.list
+     array: true
+     label: Summaries
+     description: Summaries about expertice and interests.
+     value: title
+     ajax: true
+     fields:
+       .icon:
+         type: input.icon
+         label: Icon
+
+       .title:
+         type: input.text
+         label: Title
+
+       .content:
+         type: textarea.textarea
+         label: Content
+
+       .id:
+         type: input.text
+         label: CSS ID
+         description: Enter the ID for the block without the hash (#) (ie. <code>your-id</code>. You can then reference the element via CSS as <code>#your-id</code>
+         default:
+
+       .class:
+         type: input.selectize
+         label: CSS Classes
+         description: Enter CSS class names.
+         default:
+
+     contact.link:
+       type: input.text
+       label: Contact link
+       description: Globally enable to the particles.
+
+     cv.link:
+       type: input.text
+       label: CV link
+       description: Globally enable to the particles.
+
+    contact.link:
+     type: input.text
+     label: Contact Link
+     description: Link to contact form.
+
+    cv.link:
+     type: input.text
+     label: CV Link
+     description: Link to CV.
+
+    id:
+     type: input.text
+     label: CSS ID
+     description: Enter the ID for the block without the hash (#) (ie. <code>your-id</code>. You can then reference the element via CSS as <code>#your-id</code>
+     default:
+
+    class:
+     type: input.selectize
+     label: CSS Classes
+     description: Enter CSS class names.
+     default:
