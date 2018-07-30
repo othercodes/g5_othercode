@@ -5,15 +5,8 @@ jQuery(document).ready(function () {
     jQuery(window).resize(function () {
         jQuery('.full-screen').height(jQuery(window).height());
     });
-    
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
-    } else {
-        jQuery.stellar({
-            horizontalScrolling: false,
-            responsive: true
-        });
-    }
+    jQuery(window).enllax();
 
     jQuery('a[href^="#"]').on('click', function (e) {
         e.preventDefault();

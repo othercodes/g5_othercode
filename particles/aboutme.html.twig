@@ -2,87 +2,89 @@
 
 {% block particle %}
     <div class="about-me">
-        <h2 class="section-title wow fadeInUp animated">About Me</h2>
+
         <div class="g-grid">
 
-            <div class="g-block size-70">
+            <div class="g-block size-65">
+                <div class="g-content">
+                    <div class="wow fadeInUp animated short-info">
 
-                <div class="short-info wow fadeInUp animated">
-                    <h3>What I Do ?</h3>
-                    <p>{{ particle.bio }}</p>
+                        <div>
+                            {{ particle.bio }}
+                        </div>
 
-                    <div class="g-grid">
-                        {% for sample in particle.samples %}
-                            <div {% if sample.id %}id="{{ sample.id|e }}"{% endif %}
-                                 class="g-block {{ sample.class }} {{ sample.variations }}">
-                                <div class="g-content">
-                                    {% if sample.image %}
-                                        <img src="{{ url(sample.image) }}" class="logo-large"
-                                             alt="{{ sample.title|e }}"/>
-                                    {% endif %}
-
-                                    {% if sample.icon %}
-                                        <i class="{{ sample.icon }} sample-icons"></i>
-                                    {% endif %}
-
-                                    <h4>{{ sample.title|raw }}</h4>
-                                    <div class="sample-sub-content">
-                                        {{ sample.subtitle|raw }}
-                                        {{ sample.description|raw }}
+                        <div class="g-grid">
+                            {% for hobby in particle.hobbies %}
+                                <div {% if hobby.id %}id="{{ hobby.id|e }}"{% endif %}
+                                     class="center g-block {{ hobby.class }} {{ hobby.variations }}">
+                                    <div>
+                                        {% if hobby.icon %}
+                                            <i class="{{ hobby.icon }}"></i>
+                                        {% endif %}
+                                        <h4>{{ hobby.title|raw }}</h4>
                                     </div>
                                 </div>
-                            </div>
-                        {% endfor %}
+                            {% endfor %}
+                        </div>
                     </div>
 
-                    <div class="g-grid">
-                        {% for hobby in particle.hobbies %}
-                            <div {% if hobby.id %}id="{{ hobby.id|e }}"{% endif %}
-                                 class="g-block {{ hobby.class }} {{ hobby.variations }}">
-                                <div class="g-content">
-                                    {% if hobby.icon %}<i class="{{ hobby.icon }}"></i>{% endif %}
-                                    <h4>{{ hobby.title|raw }}</h4>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                </div>
+                    <div class="wow fadeInUp animated download-button">
 
-                <div class="download-button">
-                    <a class="btn btn-primary" href="#contact"><i class="fa fa-paper-plane"></i> Contacto</a>
-                    <a class="btn btn-secondary" href="#"><i class="fa fa-download"></i> Mi CV</a>
+                        <a class="btn btn-primary" href="#contact">
+                            <i class="fa fa-paper-plane"></i> Contacto
+                        </a>
+
+                        <a class="btn btn-secondary" href="#">
+                            <i class="fa fa-download"></i> Mi CV
+                        </a>
+
+                    </div>
+
                 </div>
             </div>
 
-            <div class="g-block size-30">
+            <div class="g-block size-35">
+                <div class="g-content">
+                    <div class="biography">
 
-                <div class="biography">
-                    {% if particle.photo %}
-                        <div class="myphoto">
-                            <img src="assets/images/myphoto.jpg" alt="Photo">
-                        </div>
-                    {% endif %}
-                    <ul>
-                        {% if particle.name %}
-                            <li><strong>Nombre:</strong> {{ particle.name }}</li>
+                        {% if particle.photo %}
+                            <div class="myphoto">
+                                <img src="{{ url(particle.photo) }}" alt="Photo">
+                            </div>
                         {% endif %}
+                        <ul>
+                            {% if particle.name %}
+                                <li><i class="fa fa-user fa-lg"></i> {{ particle.name }}</li>
+                            {% endif %}
 
-                        {% if particle.birth %}
-                            <li><strong>F. Nacimiento:</strong> {{ particle.birth }}</li>
-                        {% endif %}
+                            {% if particle.birth %}
+                                <li><i class="fa fa-calendar fa-lg"></i> {{ particle.birth }}</li>
+                            {% endif %}
 
-                        {% if particle.address %}
-                            <li><strong>Direcci&oacute;n:</strong> {{ particle.address }}</li>
-                        {% endif %}
+                            {% if particle.phone %}
+                                <li><i class="fa fa-phone fa-lg"></i> {{ particle.phone }}</li>
+                            {% endif %}
 
-                        {% if particle.phone %}
-                            <li><strong>Tel&eacute;fono:</strong> {{ particle.phone }}</li>
-                        {% endif %}
+                            {% if particle.email %}
+                                <li><i class="fa fa-envelope fa-lg"></i> {{ particle.email }}</li>
+                            {% endif %}
 
-                        {% if particle.email %}
-                            <li><strong>Email:</strong> {{ particle.email }}</li>
-                        {% endif %}
-                    </ul>
+                            {% if particle.address %}
+                                <li>
+                                    <div class="g-grid">
+                                        <div class="g-block size-30">
+                                            <i class="fa fa-address-card fa-lg"></i>
+                                        </div>
+                                        <div class="g-block size-70">
+                                            {{ particle.address }}
+                                        </div>
+                                    </div>
+
+                                </li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
                 </div>
             </div>
 
