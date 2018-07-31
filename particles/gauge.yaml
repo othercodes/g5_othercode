@@ -1,0 +1,25 @@
+name: Gauge
+description: Displays a gauge/pie chart.
+type: particle
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable to the particles.
+      default: true
+
+    percent:
+      type: input.number
+      label: Percent
+      default: 100
+
+    title:
+      type: input.text
+      label: Title
+
+    color:
+      type: input.colorpicker
+      label: Background
+      default: "#ffffff"
