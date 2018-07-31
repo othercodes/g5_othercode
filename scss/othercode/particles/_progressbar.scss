@@ -1,0 +1,57 @@
+div[id^="progressbar-"].g-content.g-particle {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.progress-container {
+  position: relative;
+
+  .progress-title {
+
+    width: 25%;
+    float: left;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: -17px;
+      text-transform: capitalize;
+    }
+
+  }
+
+  .progress {
+    height: 10px;
+    margin-bottom: 40px;
+    border-radius: 3px;
+    box-shadow: none;
+
+    .bar {
+      background-image: none;
+
+      span {
+        position: absolute;
+        top: -20px;
+        right: 15px;
+      }
+
+      &.six-sec-ease-in-out {
+        -webkit-transition: width 2s ease-in-out;
+        -moz-transition: width 2s ease-in-out;
+        -o-transition: width 2s ease-in-out;
+        transition: width 2s ease-in-out;
+      }
+
+    }
+  }
+}
+
+
+
+
+
+
+
+

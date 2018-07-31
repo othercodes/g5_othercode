@@ -1,4 +1,10 @@
-/* === Chart CSS  === */
+div[id^="gauge-"].g-content.g-particle {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .chart {
   position: relative;
   display: inline-block;
@@ -6,35 +12,35 @@
   height: 140px;
   margin: 40px auto;
   text-align: center;
-}
-.chart canvas {
-  position:absolute;
-  top:0;
-  left:0;
-}
-.percent {
-  display: inline-block;
-  margin: auto;
-  line-height: 140px;
-  z-index: 2;
-  font-size: 25px;
-  font-weight: 500;
-  text-align: center;
-}
 
-.percent:after {
-  content: '%';
-}
+  .percent {
+    display: inline-block;
+    margin: auto;
+    line-height: 140px;
+    z-index: 2;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
 
-.chart-text span {
-  font-size: 18px;
-  font-weight: 400;
-  text-transform: capitalize;
-  display: block;
-  margin-top: 20px;
-}
+    &:after {
+      content: '%';
+    }
+  }
 
-/*.percent:after {content: '%';margin-left: 0.1em;font-size: .8em;}*/
-.angular{margin-top:100px;}
-.angular .chart {margin-top:0;}
-.chart .chart-text h3{font-size:22px;}
+  .chart-text {
+
+    span {
+      font-size: 18px;
+      font-weight: 400;
+      display: block;
+      margin-top: 20px;
+      line-height: 1.3em;
+    }
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
