@@ -25,6 +25,12 @@ form:
       label: Text
       description: Some text.
 
+    scroll.to:
+      type: input.text
+      label: Scroll to
+      description: Scroll to this DOM element.
+      default: '#wheel'
+
     filter.enable:
       type: input.checkbox
       label: Accent Filter
