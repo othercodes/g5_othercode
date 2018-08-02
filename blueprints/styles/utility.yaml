@@ -13,6 +13,28 @@ form:
       type: input.colorpicker
       label: Text
       default: "#ffffff"
+    background-image:
+      type: input.imagepicker
+      label: Background Image
+      default: 'gantry-media://utility/utility-001.jpg'
+    background-overlay:
+      type: select.select
+      label: Background Overlay
+      description: 'Enables the overlay made of background color.'
+      placeholder: 'Select...'
+      default: enabled
+      options:
+        enabled: Enabled
+        disabled: Disabled
+    background-parallax:
+      type: select.select
+      label: Parallax Effect
+      description: 'Enables the CSS based parallax effect.'
+      placeholder: 'Select...'
+      default: enabled
+      options:
+        enabled: Enabled
+        disabled: Disabled
     padding:
       type: select.select
       label: Padding

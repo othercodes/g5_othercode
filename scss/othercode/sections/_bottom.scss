@@ -2,9 +2,35 @@
   background: $bottom-background;
   color: $bottom-text-color;
   padding: $section-padding;
+  position: relative;
+  z-index: 10;
 
   @include breakpoint(tablet-range) {
     padding: 0;
+  }
+
+  @if $bottom-background-image {
+    background: url($bottom-background-image) no-repeat center center;
+
+    @if $bottom-background-parallax == 'enabled' {
+      background-attachment: fixed;
+      background-position: 0 0;
+    }
+
+    background-size: cover;
+
+    @if $bottom-background-overlay == 'enabled' {
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: transparentize($bottom-background, 0.5);
+      }
+    }
   }
 }
 

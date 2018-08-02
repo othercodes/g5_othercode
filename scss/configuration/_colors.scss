@@ -54,6 +54,9 @@ $features-text-color:             #444444 !default;
 // Utility
 $utility-background:              #444444 !default;
 $utility-text-color:              #ffffff !default;
+$utility-background-image:        false !default;
+$utility-background-overlay:      false !default;
+$utility-background-parallax:     false !default;
 
 // Above
 $above-background:                #ffffff !default;
@@ -70,6 +73,9 @@ $below-text-color:                #444444 !default;
 // Bottom
 $bottom-background:                #ffffff !default;
 $bottom-text-color:                #444444 !default;
+$bottom-background-image:          false !default;
+$bottom-background-overlay:        false !default;
+$bottom-background-parallax:       false !default;
 
 // Footer
 $footer-background:               #3b3b3b !default;

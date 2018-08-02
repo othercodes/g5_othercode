@@ -1,9 +1,35 @@
 #g-utility {
   background: $utility-background;
   color: $utility-text-color;
+  position: relative;
+  z-index: 10;
 
   @if $utility-padding == 'enabled' {
     padding: $section-padding 0;
+  }
+
+  @if $utility-background-image {
+    background: url($utility-background-image) no-repeat center center;
+
+    @if $utility-background-parallax == 'enabled' {
+      background-attachment: fixed;
+      background-position: 0 0;
+    }
+
+    background-size: cover;
+
+    @if $utility-background-overlay == 'enabled' {
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: transparentize($utility-background, 0.5);
+      }
+    }
   }
 }
 

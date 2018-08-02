@@ -16,7 +16,7 @@ form:
     background-overlay:
       type: select.select
       label: Background Overlay
-      description: 'Enables the linear gradient overlay made of accent colors.'
+      description: 'Enables the overlay made of background color.'
       placeholder: 'Select...'
       default: enabled
       options:

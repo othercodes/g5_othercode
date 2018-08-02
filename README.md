@@ -33,3 +33,7 @@ Configuring parallax in Home page for section showcase:
 1. Import `jquery.enllax.js` in **Base Outline > Page Settings [Tab] > Assets** (Before `</body>` **on**).
 2. In **Home > Styles [tab]** set **Showcase Styles > Parallax Effect** to `enabled`.
 3. In **Home > Layout** edit the showcase section and add a new tag attribute for: `data-enllax-ratio` = `-0.2`
+
+#### Disclaimer
+
+All used images are from **pexels.com**.
