@@ -1,0 +1,33 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    <div class="{{ particle.class|e }}">
+        <div class="timeline-title">
+            <h3>{{ particle.title }}</h3>
+        </div>
+        <div class="timeline-container">
+            <ul class="timeline">
+                {% for item in particle.items %}
+                    <li {% if loop.index % 2 == 0 %}class="timeline-inverted"{% endif %}>
+                        <div class="posted-date">
+                            <span class="month">{{ item.years }}</span>
+                        </div>
+
+                        <div class="timeline-panel wow fadeInUp">
+                            <div class="timeline-content">
+                                <div class="timeline-heading">
+                                    <h3>{{ item.title }}</h3>
+                                    <span>{{ item.subtitle }}</span>
+                                </div>
+
+                                <div class="timeline-body">
+                                    {{ item.desc|raw }}
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
