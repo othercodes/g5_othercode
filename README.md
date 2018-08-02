@@ -2,6 +2,8 @@
 
 otherCode Joomla Template developed with Gantry 5
 
+![template_preview.png](template_preview.png)
+
 ## Build Package
 
 Run the following command:
