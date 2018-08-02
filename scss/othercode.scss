@@ -28,6 +28,8 @@
 @import "othercode/styles/othercode-style";
 // Roksproket
 @import "othercode/styles/roksprocket";
+// Extensions
+@import "othercode/styles/extenisons";
 //-------------------------------------------
 // SECTIONS STYLING
 // PageSurround
@@ -90,6 +92,8 @@
 @import "othercode/particles/timeline";
 @import "othercode/particles/tags";
 @import "othercode/particles/aboutme";
+@import "othercode/particles/gauge";
+@import "othercode/particles/progressbar";
 //-------------------------------------------
 // ANIMATION
 @import "othercode/styles/animate";

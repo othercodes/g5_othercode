@@ -17,9 +17,14 @@
             {% endif %}
         </div>
     </div>
-    <script>
+
+{% endblock %}
+
+{% block javascript_footer %}
+    {% do gantry.load('jquery') %}
+    <script type="text/javascript">
         jQuery(window).load(function () {
-            jQuery('#loading').fadeOut('slow');
+            jQuery('#loading').delay(350).fadeOut('slow');
         });
     </script>
 {% endblock %}

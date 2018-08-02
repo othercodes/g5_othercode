@@ -25,11 +25,11 @@ form:
       label: Text
       description: Some text.
 
-    link:
+    scroll.to:
       type: input.text
-      label: Link to
-      description: Link to something.
-      default: '#'
+      label: Scroll to
+      description: Scroll to this DOM element.
+      default: '#wheel'
 
     filter.enable:
       type: input.checkbox

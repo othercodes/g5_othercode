@@ -1,0 +1,53 @@
+name: Timeline
+description: Display a timeline layout.
+type: particle
+icon: fa-list
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable logo particles.
+      default: true
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+
+    title:
+      type: input.text
+      label: Title
+      description: Customize the title text.
+      placeholder: 'Enter title'
+
+    items:
+      type: collection.list
+      array: true
+      label: Timeline items
+      description: Create each timeline item to display.
+      value: years
+      ajax: true
+
+      fields:
+
+        .years:
+          type: input.text
+
+        .title:
+          type: input.text
+          label: Title
+          description: Enter the title
+
+        .subtitle:
+          type: input.text
+          label: Subtitle
+          description: Enter the subtitle
+
+        .desc:
+          type: textarea.textarea
+          label: Description
+          description: Customize the description.
+          placeholder: Enter short description
+

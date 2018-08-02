@@ -1,5 +1,5 @@
-name: Gauge
-description: Displays a gauge/pie chart.
+name: Progress bar
+description: Displays a progress bar.
 type: particle
 
 form:

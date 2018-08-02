@@ -1,0 +1,36 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    <div id="item-{{ id }}" class="chart" data-percent="{{ particle.percent }}">
+        <span class="percent"></span>
+        <div class="chart-text">
+            <span>{{ particle.title }}</span>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript_footer %}
+    {% do gantry.load('jquery') %}
+    <script src="{{ url('gantry-theme://js/jquery.easypiechart.js') }}"></script>
+    <script type="text/javascript">
+        jQuery('#item-{{ id }}').bind('inview', function (event, visible, visiblePartX, visiblePartY) {
+            if (visible) {
+                jQuery('#item-{{ id }}').easyPieChart({
+                    easing: 'easeOut',
+                    delay: 3000,
+                    barColor: '{{ particle.color }}',
+                    trackColor: 'rgba(255,255,255,0.2)',
+                    scaleColor: false,
+                    lineWidth: 8,
+                    size: 140,
+                    animate: 2000,
+                    onStep: function (from, to, percent) {
+                        this.el.children[0].innerHTML = Math.round(percent);
+                    }
+                });
+                jQuery(this).unbind('inview');
+            }
+        });
+    </script>
+{% endblock %}

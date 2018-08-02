@@ -43,7 +43,7 @@
                                 {% endif %}
 
                                 {% if particle.cv.link %}
-                                    <a class="btn btn-secondary" href="#">
+                                    <a class="btn btn-secondary" href="{{ url(particle.cv.link) }}" target="_blank">
                                         <i class="fa fa-download"></i> {{ "TPL_G5_OTHERCODE_PARTICLE_ABOUTME_MY_CV_LINK"|trans }}
                                     </a>
                                 {% endif %}
@@ -99,7 +99,7 @@
                                             <strong>
                                                 {{ 'TPL_G5_OTHERCODE_PARTICLE_ABOUTME_EMAIL'|trans }}:
                                             </strong>
-                                            {{ particle.email }}
+                                            <a href="mailto:{{ particle.email }}">{{ particle.email }}</a>
                                         </li>
                                     {% endif %}
 
