@@ -28,12 +28,20 @@
       text-align: center;
     }
 
-    a {
-      color: $copyright-text-color;
+    li {
+      display: inline-block;
 
-      &:hover {
-        color: fadeout($copyright-text-color, 40%);
-        //box-shadow: 0 2px 0 fadeout($copyright-text-color, 80%);
+      &:after {
+        color: fadeout($copyright-text-color, 80%);
+      }
+
+      a {
+
+        color: $copyright-text-color;
+
+        &:hover {
+          color: fadeout($copyright-text-color, 40%);
+        }
       }
     }
   }
