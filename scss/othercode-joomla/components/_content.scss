@@ -13,7 +13,7 @@ dl.article-info {
     font-family: get-font-family($font-family-default);
     text-transform: uppercase;
     color: $base-text-color;
-    font-size: $core-font-size - 0.15;
+    //font-size: $core-font-size - 0.15;
     line-height: $core-line-height - 0.15;
     font-size: 65%;
 
@@ -111,6 +111,23 @@ p.readmore {
   }
 }
 
+[itemtype="https://schema.org/BlogPosting"] {
+  &.system-unpublished {
+    .system-unpublished {
+      background-color: #f1f1f1;
+    }
+  }
+}
+
+[itemtype="https://schema.org/Article"],
+[itemtype="https://schema.org/Blog"] {
+  .page-header {
+    h2 {
+      line-height: 2.5rem;
+    }
+  }
+}
+
 // Archived Articles
 .chzn-container-single .chzn-single, .chzn-container-active.chzn-with-drop .chzn-single {
   background: $base-background;
@@ -140,6 +157,7 @@ p.readmore {
 .pagination {
   margin: 40px 0 20px 0;
 }
+
 .pagination ul > li > a,
 .pagination ul > li > span {
   border: none;
