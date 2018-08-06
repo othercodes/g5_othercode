@@ -1,0 +1,49 @@
+name: WOW JS + Animated CSS
+description: Configure Enllax.js
+type: atom
+icon: fa-file
+
+form:
+  fields:
+
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable analytic particles.
+      default: true
+
+    boxClass:
+      type: input.text
+      description: Animated element css class (default is wow).
+      label: Element CSS Class
+      default: 'wow'
+
+    animateClass:
+      type: input.text
+      description: Animation css class (default is animated).
+      label: Animation CSS Class
+      default: 'animated'
+
+    offset:
+      type: input.number
+      description: Distance to the element when triggering the animation (default is 0).
+      label: Triggering distance
+      default: 0
+
+    mobile:
+      type: input.checkbox
+      description: Trigger animations on mobile devices (default is true).
+      label: Trigger on mobile
+      default: false
+
+    live:
+      type: input.checkbox
+      description: Act on asynchronously loaded content (default is true).
+      label: Load Asynchronously
+      default: true
+
+    scrollContainer:
+      type: input.text
+      description: Optional scroll container selector, otherwise use window.
+      label: Scroll container selector
+      default: 'null'

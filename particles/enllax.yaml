@@ -1,0 +1,19 @@
+name: Enllax JS
+description: Configure WOW.js and Animate.css
+type: atom
+icon: fa-file
+
+form:
+  fields:
+
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable analytic particles.
+      default: true
+
+    mobile:
+      type: input.checkbox
+      description: Trigger effect on mobile devices (default is true).
+      label: Trigger on mobile
+      default: false

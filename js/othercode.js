@@ -1,16 +1,9 @@
 jQuery(document).ready(function () {
 
     jQuery('.full-screen').height(jQuery(window).height());
-
     jQuery(window).resize(function () {
         jQuery('.full-screen').height(jQuery(window).height());
     });
-
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-
-    } else {
-        jQuery(window).enllax();
-    }
 
     jQuery('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
@@ -19,11 +12,6 @@ jQuery(document).ready(function () {
         var ID = jQuery(this).attr("id");
 
         if (ID !== "g-totop") {
-
-            if (!target) {
-                target = ".site";
-            }
-
             var $target = jQuery(target);
             jQuery('html, body').stop().animate({'scrollTop': $target.offset().top}, 600, 'swing', function () {
                 if (target !== ".site") {
@@ -32,10 +20,6 @@ jQuery(document).ready(function () {
             });
         }
     });
-
-    new WOW({
-        mobile: false
-    }).init();
 
     if (jQuery('#g-navigation').css('position') === 'fixed') {
         jQuery(window).scroll(function () {
