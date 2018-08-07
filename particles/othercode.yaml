@@ -1,0 +1,14 @@
+name: otherCode Misc
+description: Various code snippets for the template.
+type: atom
+icon: fa-file
+
+form:
+  fields:
+
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable analytic particles.
+      default: true
+
