@@ -12,6 +12,30 @@ form:
       description: Globally enable analytic particles.
       default: true
 
+    ratio:
+      type: input.number
+      description: Multiplier for scrolling speed. Less is slower. (Default: '0').
+      label: Ratio
+      default: 0
+
+    type:
+      type: select.select
+      label: Type
+      description: Type can be defined as it is background parallax scrolling element or foreground scrolling element.
+      default: background
+      options:
+        background: Background
+        foreground: Foreground
+
+    direction:
+      type: select.select
+      label: Direction
+      description: Parallax effect can now be applied in both vertical and horizontal directions.
+      default: vertical
+      options:
+        vertical: Vertical
+        horizontal: Horizontal
+
     mobile:
       type: input.checkbox
       description: Trigger effect on mobile devices (default is true).
