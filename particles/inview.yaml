@@ -1,0 +1,22 @@
+name: InView
+description: Event that is fired as soon as an element appears in the user's viewport.
+type: atom
+icon: fa-image
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable InView atom.
+      default: true
+
+    _instructions:
+      type: separator.note
+      class: alert alert-info
+      content: Basic usage: <pre>$('div').on('inview', function(event, inview) {<br />   if (inview) {<br />      // element is now visible in the viewport<br />   } else {<br />      // element has gone out of viewport<br/>    }<br/>});</pre>
+
+    _info:
+      type: separator.note
+      class: alert alert-info
+      content: 'For more information on how to use this atom, see <a href="https://github.com/protonet/jquery.inview">InView documentation <i class="fa fa-external-link" aria-hidden="true"></i></a>.'
