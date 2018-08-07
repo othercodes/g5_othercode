@@ -41,3 +41,14 @@ form:
       description: Trigger effect on mobile devices (default is true).
       label: Trigger on mobile
       default: false
+
+    _instructions:
+      type: separator.note
+      class: alert alert-info
+      content: Basic usage: <pre>&lt;div data-enllax-ratio=".5" data-enllax-direction="horizontal">...&lt;/div></pre>
+
+    _info:
+      type: separator.note
+      class: alert alert-info
+      content: 'For more information on how to use this atom, see <a href="https://github.com/mmkjony/enllax.js">Enllax page <i class="fa fa-external-link" aria-hidden="true"></i></a>.'
+
