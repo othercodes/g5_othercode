@@ -9,8 +9,10 @@
       display: inline-block;
 
       li {
-        width: 50%;
-        float: left;
+        @include breakpoint(no-mobile) {
+          width: 50%;
+          float: left;
+        }
       }
     }
   }
@@ -51,10 +53,6 @@
     list-style: none
   }
 
-  ul.list-check {
-
-  }
-
   ul.list-check li {
     position: relative;
     font-size: 18px;
@@ -67,4 +65,19 @@
     color: $accent-color-1;
     margin-right: 10px;
   }
+
+  .pull {
+    @include breakpoint(no-mobile) {
+      right: 35%;
+      position: relative;
+    }
+  }
+
+  .push {
+    @include breakpoint(no-mobile) {
+      left: 65%;
+      position: relative;
+    }
+  }
+
 }
