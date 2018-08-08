@@ -2,6 +2,10 @@
   background: $above-background;
   color: $above-text-color;
   padding: $section-padding 0;
+
+  @include breakpoint(mobile-only) {
+    padding: 0;
+  }
 }
 
 @media print {

@@ -38,14 +38,13 @@
 }
 
 .g-offcanvas-toggle {
-  position: fixed;
   font-size: 2rem;
   color: $offcanvas-toggle-color;
-  width: 32px;
-  height: 32px;
+  width: 42px;
+  height: 42px;
   top: 1.2rem;
+  line-height: 2.8rem;
   z-index: 100001;
-
   .g-offcanvas-open & {
     color: fadeout($white, 40%);
   }

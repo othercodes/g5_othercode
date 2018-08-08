@@ -6,10 +6,12 @@
   z-index: 11;
 
   @if $navigation-dynamic-layout == 'enabled' {
-    top: 0;
-    width: 100%;
-    position: fixed;
-    display: none;
+    @include breakpoint(no-mobile) {
+      top: 0;
+      width: 100%;
+      position: fixed;
+      display: none;
+    }
   }
 
   // Container
@@ -35,6 +37,25 @@
       .g-content {
         margin-top: 0;
         padding: 0 $content-padding;
+      }
+    }
+  }
+
+  // Social Particle
+  .g-social {
+    a {
+      color: fadeout($white, 50%);
+
+      @include breakpoint(mobile-only) {
+        color: inherit;
+      }
+
+      &:hover {
+        color: $white;
+
+        @include breakpoint(mobile-only) {
+          color: $accent-color-1;
+        }
       }
     }
   }

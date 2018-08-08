@@ -15,25 +15,6 @@
           }
         }
       }
-
-      // Social Particle
-      .g-social {
-        a {
-          color: fadeout($white, 50%);
-
-          @include breakpoint(mobile-only) {
-            color: inherit;
-          }
-
-          &:hover {
-            color: $white;
-
-            @include breakpoint(mobile-only) {
-              color: $accent-color-1;
-            }
-          }
-        }
-      }
     }
 
     // Intro Section

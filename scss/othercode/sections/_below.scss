@@ -3,7 +3,7 @@
   color: $below-text-color;
   padding: $section-padding;
 
-  @include breakpoint(tablet-range) {
+  @include breakpoint(mobile-only) {
     padding: 0;
   }
 }

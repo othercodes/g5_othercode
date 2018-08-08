@@ -93,6 +93,19 @@ $css_multipliers: 2, 3;
   }
 }
 
+// extra moduletable + nomargin/nopadding
+.nomarginall {
+  .moduletable[class*="box"] {
+    margin: 0;
+  }
+}
+
+.nopaddingall {
+  .moduletable[class*="box"] {
+    padding: 0;
+  }
+}
+
 // Title 1
 .title1 {
   .g-title {
@@ -370,19 +383,22 @@ $css_multipliers: 2, 3;
   text-shadow: none;
 }
 
-
 .published:before {
   content: "\f073";
 }
+
 .modified:before {
   content: "\f073";
 }
+
 .create:before {
   content: "\f073";
 }
+
 .createdby:before {
   content: "\f040";
 }
+
 .category-name:before {
   content: "\f07b";
 }
