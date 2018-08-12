@@ -1,0 +1,13 @@
+name: Terminal
+description: Displays a configurable and interactive CSS3 console-based.
+type: particle
+icon: fa-terminal
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable to the particles.
+      default: true
+
