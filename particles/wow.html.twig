@@ -10,7 +10,7 @@
         {{ parent() }}
         <script src="{{ url('gantry-theme://js/wow.js') }}" type="text/javascript"></script>
         <script type="text/javascript">
-            window.addEvent('load', function () {
+            window.onload = function () {
                 new WOW({
                     boxClass: '{{ particle.boxClass }}',
                     animateClass: '{{ particle.animateClass }}',
@@ -19,7 +19,7 @@
                     live: {{ particle.live }},
                     scrollContainer: {{ particle.scrollContainer }}
                 }).init();
-            });
+            };
         </script>
     {% endif %}
 {% endblock %}
