@@ -1,32 +1,49 @@
 {% extends '@nucleus/partials/particle.html.twig' %}
 
 {% block particle %}
-    <div class="terminal">
+    <div class="terminal" id="{{ id }}">
+        <div class="terminal-wrapper" id="{{ id }}-terminal-wrapper"
+             style="background-color: {{ particle.background.color }};">
+            <div class="terminal-toolbar" id="{{ id }}-terminal-toolbar">
+                <div class="terminal-btn btn-close" id="{{ id }}-btn-close" title="Close"></div>
+                <div class="terminal-btn btn-minimize" id="{{ id }}-btn-minimize" title="Minimize"></div>
+                <div class="terminal-btn btn-maximize" id="{{ id }}-btn-maximize" title="Maximize"></div>
+                {{ particle.terminal.title }}
+            </div>
+            <div class="terminal-screen" id="{{ id }}-terminal-screen">
 
-        <div class="term-section" id="term-home">
-            <p>Oops, parece que algo ha salido mal!</p>
-            <p><span>Type 'help' + <kbd>Enter</kbd> -- for available commands.</span></p>
-        </div>
+                {% for item in particle.items %}
+                    <div class="term-section" id="term-{{ item.command }}">
+                        <p>{{ item.name }}</p>
+                        <p>{{ item.output }}</p>
+                        <p class="help"><span>Type 'help' + <kbd>Enter</kbd>: for available commands.</span></p>
+                    </div>
+                {% endfor %}
 
+                <div class="term-section" id="term-error">
+                    <p>Command not found!</p>
+                    <p class="help"><span>Type 'help' + <kbd>Enter</kbd>: for available commands.</span></p>
+                </div>
 
-        <div class="term-section" id="term-error">
-            <p>Command not found!</p>
-            <p><span>Type 'help' + <kbd>Enter</kbd> -- for available commands.</span></p>
-        </div>
+                <div class="term-section" id="term-help">
+                    <h2><span>&raquo; Help?</span></h2>
+                    <p class="help"><span>Type [command] + <kbd>Enter</kbd></span></p>
+                    <ul>
+                        {% for item in particle.items %}
+                            <li>'{{ item.command }}': {{ item.description }}</li>
+                        {% endfor %}
+                        <li>'help': displays this list</li>
+                    </ul>
+                </div>
 
-
-        <div class="term-section" id="term-help">
-            <h2><span>&raquo;Help?</span></h2>
-            <p><span>Type [command] + <kbd>Enter</kbd></span></p>
-            <ul>
-                <li>'home' -- Thats obvious!</li>
-                <li>'help' -- displays this list</li>
-            </ul>
-        </div>
-
-        <span class="command">
-            <span class="hostname">othercode@user</span>:<span class="pwd">~</span>$<input type="text"/>
+                <span class="command">
+            <span class="hostname">othercode@asimov</span>:<span class="pwd">~</span>$
+            <input type="text" id="terminal-input"
+                   style="background-color: {{ particle.background.color }};color: {{ particle.font.color }};"
+            />
         </span>
+            </div>
+        </div>
     </div>
 {% endblock %}
 
@@ -102,63 +119,62 @@
                 }
             })(jQuery)
 
-
-            // Let's do it!!
             jQuery(document).ready(function () {
 
-                jQuery('.command').hide();
-                jQuery('input[type="text"]').focus();
-
-                jQuery('#term-home').addClass('open');
-                jQuery('#term-home').textTyper({
-                    speed: 1,
-                    afterAnimation: function () {
-                        jQuery('.command').fadeIn();
-                        jQuery('input[type="text"]').focus();
-                        jQuery('input[type="text"]').val('');
-                    }
-                });
-
-                var sectionArray = [];
+                let sectionArray = [];
                 jQuery('.term-section').each(function (i, e) {
                     sectionArray.push(jQuery(e).attr('id'));
                 });
 
-                // Command Input------------------------------
+                let terminalInput = jQuery('#terminal-input');
+                let errorCommandLayout = jQuery('#term-error');
+                let homeCommandLayout = jQuery('#' + sectionArray[0]);
 
-                jQuery('input[type="text"]').keyup(function (e) {
+                jQuery('#{{ id }}-btn-close').click(function () {
+                    jQuery('#{{ id }}-terminal-wrapper').hide();
+                });
+                jQuery('#{{ id }}-btn-minimize').click(function () {
+                    jQuery('#{{ id }}-terminal-wrapper').addClass('minimized');
+                });
+                jQuery('#{{ id }}-btn-maximize').click(function () {
+                    jQuery('#{{ id }}-terminal-wrapper').removeClass('minimized');
+                });
 
-                    if (e.which == 13) { // ENTER key pressed
+                jQuery('.command').hide();
+                terminalInput.focus();
+
+                homeCommandLayout.addClass('open');
+                homeCommandLayout.textTyper({
+                    speed: 1,
+                    afterAnimation: function () {
+                        jQuery('.command').fadeIn();
+                        terminalInput.focus();
+                        terminalInput.val('');
+                    }
+                });
+
+                terminalInput.keyup(function (e) {
+                    if (e.which === 13) {
 
                         jQuery('.command').hide();
+                        let destination = terminalInput.val();
 
-                        var destination = jQuery('input[type="text"]').val();
-
-                        // Display section with id == destination and hide all others
                         jQuery('div[id="term-' + destination + '"]').addClass('open').siblings().removeClass('open');
-
-                        // If destination does not match our array of section ids, display error section
-                        if (jQuery.inArray(destination, sectionArray) == -1) {
-                            jQuery('#error').addClass('open');
-                            jQuery('#error').siblings().removeClass('open');
+                        if (jQuery.inArray('term-' + destination, sectionArray) === -1) {
+                            errorCommandLayout.addClass('open');
+                            errorCommandLayout.siblings().removeClass('open');
                         }
 
-                        // All sections with class .open init textTyper
                         jQuery('.open').textTyper({
-                            speed: 20,
+                            speed: 1,
                             afterAnimation: function () {
                                 jQuery('.command').fadeIn();
-                                jQuery('input[type="text"]').focus();
-                                jQuery('input[type="text"]').val('');
+                                terminalInput.focus();
+                                terminalInput.val('');
                             }
                         });
-
-                    }// end if ENTER key pressed
-
-                });// end keyup function
-
-                // End Command Input-----------------------------
-
+                    }
+                });
             });
         </script>
     {% endif %}

@@ -2,103 +2,159 @@
 
 .terminal {
   font: 1em 'Inconsolata', monospace;
+  min-height: 450px;
   font-weight: 400;
-  height: 350px;
-  padding: 1em;
+  position: relative;
+  overflow: hidden;
+  padding-top: 10px;
 
-  ::selection {
-    background: #eee
-  }
+  .terminal-wrapper {
+    min-height: 450px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: absolute;
+    width: 100%;
+    top: 10px;
 
-  ::-webkit-selection {
-    background: #eee
-  }
+    .terminal-toolbar {
+      background: $navigation-background;
+      color: $navigation-text-color;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      padding: 10px 0 5px 15px;
 
-  ::-moz-selection {
-    background: #eee
-  }
+      .terminal-btn {
+        width: 13px;
+        height: 13px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        display: inline-block;
+        cursor: pointer;
 
-  .term-section {
-    display: none;
-  }
-
-  .open {
-    display: block;
-  }
-
-  .command {
-    display: block;
-    color: $white;
-    font-weight: 700;
-
-    .hostname {
-      color: $accent-color-1;
+        &.btn-close {
+          background: $error-color;
+        }
+        &.btn-minimize {
+          background: $warning-color;
+        }
+        &.btn-maximize {
+          background: $success-color;
+        }
+      }
     }
 
-    .pwd {
-      color: $success-color;
+    .terminal-screen {
+      padding: 1em;
+
+      ::selection {
+        background: #eee
+      }
+
+      ::-moz-selection {
+        background: #eee
+      }
+
+      .term-section {
+        display: none;
+      }
+
+      .open {
+        display: block;
+      }
+
+      .command {
+        display: block;
+        color: $white;
+        font-weight: 700;
+
+        .hostname {
+          color: $accent-color-1;
+        }
+
+        .pwd {
+          color: $success-color;
+        }
+      }
+
+      a {
+        color: $accent-color-1;
+
+        &:hover,
+        &:focus {
+          color: $accent-color-2;
+        }
+      }
+
+      h2 {
+        font-size: 1em;
+        font-weight: 400;
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.2em;
+
+        &.help {
+          line-height: 2em;
+        }
+      }
+
+      abbr {
+        cursor: help;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+      }
+
+      li {
+        margin: .5em 0 0;
+      }
+
+      span {
+        color: #999;
+      }
+
+      kbd {
+        font-family: 'Inconsolata', monospace;
+        border: 1px solid #999;
+        text-transform: uppercase;
+        padding: 0 .2em;
+      }
+
+      input[type="text"] {
+        max-width: 80%;
+        border: none;
+        font-family: inherit;
+        padding: 0 .5em;
+        margin: 0;
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+
+        &:hover {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+
     }
-  }
 
-  a {
-    color: #181818;
+    transition: top .5s 0s cubic-bezier(.1, 1.2, .3, 1), transform .5s 0s cubic-bezier(.1, 1.2, .3, 1);
 
-    &:hover,
-    &:focus {
-      background: #181818;
-      color: #fff;
-    }
-  }
+    &.minimized {
+      transform: translate(0%, -30px);
+      top: 100%;
 
-  h2 {
-    font-size: 1em;
-    font-weight: 400;
-  }
-
-  p {
-    margin-bottom: 2em;
-  }
-
-  abbr {
-    cursor: help;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  li {
-    margin: 1em 0 0;
-  }
-
-  span {
-    color: #999;
-    line-height: 1;
-  }
-
-  kbd {
-    font-family: 'Inconsolata', monospace;
-    border: 1px solid #999;
-    text-transform: uppercase;
-    padding: 0 .2em;
-  }
-
-  input[type="text"] {
-    max-width: 10em;
-    border: none;
-    font-family: inherit;
-    padding: 0 .5em;
-
-    &:focus {
-      outline: none;
-      box-shadow: none;
+      .terminal-screen {
+        display: none;
+      }
     }
 
-    &:hover {
-      outline: none;
-      box-shadow: none;
-    }
   }
 
 }

@@ -11,3 +11,49 @@ form:
       description: Globally enable to the particles.
       default: true
 
+    background.color:
+      type: input.colorpicker
+      label: Background
+      default: "#000000"
+
+    font.color:
+      type: input.colorpicker
+      label: Background
+      default: "#ffffff"
+
+    terminal.title:
+      type: input.text
+      label: Title
+      description: Enter the Terminal title
+
+    items:
+      type: collection.list
+      array: true
+      label: Command items
+      description: Create each command simulation to display.
+      value: name
+      ajax: true
+
+      fields:
+
+        .name:
+          type: input.text
+          label: Command name
+          description: Enter the command friendly name
+
+        .command:
+          type: input.text
+          label: command
+          description: Enter the command line name (no spaces allowed)
+
+        .description:
+          type: textarea.textarea
+          label: Description
+          description: Command description
+          placeholder: Enter command description
+
+        .output:
+          type: textarea.textarea
+          label: Output
+          description: Command Output
+          placeholder: Enter command output
