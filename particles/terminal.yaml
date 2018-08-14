@@ -18,7 +18,7 @@ form:
 
     font.color:
       type: input.colorpicker
-      label: Background
+      label: Font Color
       default: "#ffffff"
 
     terminal.title:
@@ -26,11 +26,35 @@ form:
       label: Title
       description: Enter the Terminal title
 
+    terminal.hostname:
+      type: input.text
+      label: Hostname
+      description: Enter the Terminal hostname
+      default: 'atari800'
+
+    terminal.user:
+      type: input.text
+      label: Username
+      description: Enter the Terminal username
+      default: 'wobinett'
+
+    terminal.height:
+      type: input.text
+      label: Height
+      description: Minimal Terminal height, default 500px.
+      default: '500px'
+
+    toolbal.functionality:
+      type: input.checkbox
+      label: Enabled
+      description: Enable or disable the toolbar functionality.
+      default: true
+
     items:
       type: collection.list
       array: true
       label: Command items
-      description: Create each command simulation to display.
+      description: Create each command simulation to display
       value: name
       ajax: true
 
