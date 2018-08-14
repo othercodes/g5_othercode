@@ -14,19 +14,18 @@
 
                 {% for item in particle.items %}
                     <div class="term-section" id="term-{{ item.command }}">
-                        <p>{{ item.name }}</p>
-                        <p>{{ item.output }}</p>
+                        <div>{{ item.output|raw }}</div>
                         <p class="help"><span>Type 'help' + <kbd>Enter</kbd>: for available commands.</span></p>
                     </div>
                 {% endfor %}
 
                 <div class="term-section" id="term-error">
-                    <p>Command not found!</p>
+                    <div>Command not found!</div>
                     <p class="help"><span>Type 'help' + <kbd>Enter</kbd>: for available commands.</span></p>
                 </div>
 
                 <div class="term-section" id="term-help">
-                    <h2><span>&raquo; Help?</span></h2>
+                    <div>&raquo; Help?</div>
                     <p class="help"><span>Type [command] + <kbd>Enter</kbd></span></p>
                     <ul>
                         {% for item in particle.items %}
@@ -37,11 +36,11 @@
                 </div>
 
                 <span class="command">
-            <span class="hostname">othercode@asimov</span>:<span class="pwd">~</span>$
-            <input type="text" id="terminal-input"
-                   style="background-color: {{ particle.background.color }};color: {{ particle.font.color }};"
-            />
-        </span>
+                    <span class="hostname">othercode@asimov</span>:<span class="pwd">~</span>$
+                    <input type="text" id="terminal-input"
+                           style="background-color: {{ particle.background.color }};color: {{ particle.font.color }};"
+                    />
+                </span>
             </div>
         </div>
     </div>

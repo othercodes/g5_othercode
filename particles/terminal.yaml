@@ -35,7 +35,6 @@ form:
       ajax: true
 
       fields:
-
         .name:
           type: input.text
           label: Command name
