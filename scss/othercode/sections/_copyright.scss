@@ -1,6 +1,8 @@
 #g-copyright {
   background: $copyright-background;
   color: $copyright-text-color;
+  position: relative;
+  z-index: 20;
 
   @if $copyright-padding == 'enabled' {
     padding: $section-padding 0;

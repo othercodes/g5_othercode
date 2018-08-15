@@ -85,11 +85,11 @@
       }
 
       a {
-        color: $accent-color-1;
+        color: $accent-color-1 !important;
 
         &:hover,
         &:focus {
-          color: $accent-color-2;
+          color: $accent-color-2 !important;
         }
       }
 
@@ -159,7 +159,6 @@
     }
 
     transition: top .5s 0s cubic-bezier(.1, 1.2, .3, 1), transform .5s 0s cubic-bezier(.1, 1.2, .3, 1);
-
   }
 
 }

@@ -10,7 +10,7 @@
                 <div class="terminal-btn btn-maximize" id="{{ id }}-btn-maximize" title="Maximize"></div>
                 {{ particle.terminal.title }}
             </div>
-            <div class="terminal-screen" id="{{ id }}-terminal-screen">
+            <div class="terminal-screen" id="{{ id }}-terminal-screen" style="color: {{ particle.font.color }};">
 
                 {% for item in particle.items %}
                     <div class="term-section" id="term-{{ item.command }}">
@@ -22,10 +22,10 @@
                 <div class="term-section" id="term-rm-rf_">
                     <div>rm: cannot remove '/projects/cosmic-ac/core.c'</div>
                     <div>rm: cannot remove '/projects/cosmic-ac/ml.py'</div>
+                    <div>rm: cannot remove '/projects/cosmic-ac/bluenprints.dwg'</div>
                     <div>rm: cannot remove '/projects/deep-thought/core.c'</div>
                     <div>rm: cannot remove '/projects/deep-thought/wait.c'</div>
                     <div>rm: cannot remove '/projects/deep-thought/voice.ogg'</div>
-                    <div>rm: cannot remove '/projects/cosmic-ac/bluenprints.dwg'</div>
                     <div>rm: cannot remove '/projects/flux-capacitor/blueprint.dwg'</div>
                     <div>rm: cannot remove '/projects/jarvis/core.c'</div>
                     <div>rm: cannot remove '/projects/jarvis/ultron-directives.c'</div>
