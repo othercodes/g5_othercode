@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
+div[id^="terminal-"] {
+  &.g-content {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 .terminal {
   font: 1em 'Inconsolata', monospace;
   font-weight: 400;
