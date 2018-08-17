@@ -1,25 +1,29 @@
 // Nav Tabs
 .nav-tabs.nav-stacked > li > a {
-    border: 0 none;
+  border: 0 none;
 }
 
 .nav-tabs.nav-dark {
-    border-bottom: 1px solid #333;
-    text-shadow: 1px 1px 1px #000;
+  border-bottom: 1px solid #333;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .nav-tabs.nav-dark > li > a {
-    color: $base-border-color;
+  color: $base-border-color;
 }
 
 .nav-tabs.nav-dark > li > a:hover {
-    border-color: #333 #333 #111;
-    background-color: #777777;
+  border-color: #333 #333 #111;
+  background-color: #777777;
 }
 
 .nav-tabs.nav-dark > .active > a,
 .nav-tabs.nav-dark > .active > a:hover {
-    color: #ffffff;
-    background-color: #555555;
-    border: 1px solid #222;
+  color: #ffffff;
+  background-color: #555555;
+  border: 1px solid #222;
+}
+
+.nav-tabs > li > a {
+  border-radius: 0;
 }

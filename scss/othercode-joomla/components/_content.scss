@@ -135,7 +135,7 @@ p.readmore {
   box-shadow: none;
   height: 40px;
   line-height: 36px;
-  border-radius: 6px;
+  border-radius: 0;
 
   div b {
     position: relative;
@@ -144,7 +144,7 @@ p.readmore {
 }
 
 .chzn-container-active.chzn-with-drop .chzn-single {
-  border-radius: 6px;
+  border-radius: 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }

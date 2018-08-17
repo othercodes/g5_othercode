@@ -165,6 +165,11 @@
   color: $accent-color-1;
 }
 
+.btn-group > .btn:last-child,
+.btn-group > .dropdown-toggle {
+  border-radius: 0;
+}
+
 // Tables
 table.table-bordered {
   border-collapse: separate;
@@ -201,24 +206,22 @@ table.table-bordered {
 .edit.item-page {
   .inputbox,
   .chzn-choices {
-    border-radius: 6px;;
+    border-radius: 0;
   }
 
   .input-append {
     .inputbox {
-      border-radius: 6px 0 0 6px;
+      border-radius: 0;
     }
 
     button {
-      border-radius: 0 6px 6px 0;
+      border-radius: 0;
     }
   }
 
   .btn-toolbar {
     .btn {
       @extend %g-button;
-      font-size: $core-font-size - 0.4;
-      padding: 1.1rem 2.725rem;
       margin-left: 5px;
 
       span {
