@@ -2,7 +2,7 @@
   background: $header-background;
   color: $header-text-color;
   padding: $section-padding 0;
-  z-index: 10;
+  z-index: 20;
 
   @if $header-background-image {
     background: url($header-background-image) center center no-repeat;

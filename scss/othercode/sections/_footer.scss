@@ -2,6 +2,8 @@
   background: $footer-background;
   color: $footer-text-color;
   padding: $section-padding 0;
+  position: relative;
+  z-index: 20;
 
   .g-content {
     margin: $content-margin 0;
