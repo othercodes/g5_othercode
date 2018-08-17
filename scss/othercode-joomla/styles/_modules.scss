@@ -100,9 +100,9 @@
     li:not(:first-child) span {
       &.divider {
         &:after {
-          font-family: FontAwesome;
-          content: "\f101";
-          margin: 0 10px;
+          //font-family: FontAwesome;
+          //content: "\f101";
+          //margin: 0 10px;
         }
       }
     }

@@ -1,9 +1,12 @@
 #g-intro {
   background: $intro-background;
   color: $intro-text-color;
-  padding: $section-padding 0;
   position: relative;
   z-index: 10;
+
+  @if $intro-padding == 'enabled' {
+    padding: $section-padding 0;
+  }
 
   @if $intro-background-image {
     background: url($intro-background-image) center center no-repeat;
@@ -58,6 +61,18 @@
         font-size: $h2-font-size;
       }
     }
+  }
+
+  .fp-intro {
+
+    .g-title {
+      color: $base-background;
+
+      .title-tag {
+        color: $base-background;
+      }
+    }
+
   }
 }
 
