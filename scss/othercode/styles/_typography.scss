@@ -12,14 +12,18 @@ h1, h2, h3, h4, h5 {
   font-family: get-font-family($font-family-title);
   font-weight: $font-weight-regular;
   margin: 0.75rem 0 1rem 0;
+  > span {
+    color: $accent-color-1;
+  }
 }
 
 h1 {
   font-weight: $font-weight-bold;
-}
+  text-transform: lowercase;
 
-h2 > span {
-  color: $accent-color-1;
+  > span {
+    text-transform: capitalize;
+  }
 }
 
 h4 {
