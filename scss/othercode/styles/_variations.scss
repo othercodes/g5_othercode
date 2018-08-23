@@ -58,6 +58,32 @@ $css_multipliers: 2, 3;
   }
 }
 
+.lowecamelcase {
+
+  h1 {
+    text-transform: lowercase;
+    > span {
+      text-transform: capitalize;
+    }
+  }
+
+  h2 {
+    text-transform: lowercase;
+    > span {
+      text-transform: capitalize;
+    }
+  }
+
+}
+
+.title-comment {
+  h2 {
+    &::before {
+      content: '// ';
+    }
+  }
+}
+
 .platform-content, .moduletable, .widget {
   margin: ($content-margin) 0;
   padding: ($content-padding) 0;

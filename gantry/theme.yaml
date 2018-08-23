@@ -70,17 +70,17 @@ configuration:
     compiler: \Gantry\Component\Stylesheet\ScssCompiler
     target: gantry-theme://css-compiled
     paths:
-      - gantry-theme://scss
-      - gantry-engine://scss
+    - gantry-theme://scss
+    - gantry-engine://scss
     files:
-      - othercode
-      - othercode-joomla
-      - custom
+    - othercode
+    - othercode-joomla
+    - custom
     persistent:
-      - othercode
+    - othercode
     overrides:
-      - othercode-joomla
-      - custom
+    - othercode-joomla
+    - custom
 
   dependencies:
     gantry: 5.4.0
@@ -95,15 +95,16 @@ configuration:
       title2: Title 2
       title-gradient: Title Gradient
       title-outline: Title Outline
+      title-comment: Title Commented
     Box Variations:
       box1: Box 1
       box2: Box 2
       box-gradient: Box Gradient
       box-outline: Box Outline
     Effects:
-      spaced : Spaced
-      shadow : Shadow
-      rounded : Rounded
+      spaced: Spaced
+      shadow: Shadow
+      rounded: Rounded
     Utility:
       center: Center
       title-center: Centered Title
@@ -117,24 +118,24 @@ configuration:
 admin:
   styles:
     core:
-      - base
-      - accent
-      - font
+    - base
+    - accent
+    - font
     section:
-      - header
-      - navigation
-      - subnavigation
-      - showcase
-      - intro
-      - features
-      - utility
-      - above
-      - main
-      - sidebar
-      - below
-      - bottom
-      - footer
-      - copyright
-      - offcanvas
+    - header
+    - navigation
+    - subnavigation
+    - showcase
+    - intro
+    - features
+    - utility
+    - above
+    - main
+    - sidebar
+    - below
+    - bottom
+    - footer
+    - copyright
+    - offcanvas
     configuration:
-      - breakpoints
+    - breakpoints

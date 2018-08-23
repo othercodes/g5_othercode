@@ -1,5 +1,12 @@
 .g-home {
   &.g-othercode-style {
+
+    h2 {
+      &::before {
+        content: '// ';
+      }
+    }
+
     // Navigation Section
     #g-navigation {
       @include breakpoint(no-mobile) {
