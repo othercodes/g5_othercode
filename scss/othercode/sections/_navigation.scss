@@ -3,7 +3,7 @@
   color: $navigation-text-color;
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
   position: relative;
-  z-index: 20;
+  z-index: 30;
 
   @if $navigation-dynamic-layout == 'enabled' {
     @include breakpoint(no-mobile) {
@@ -43,6 +43,18 @@
 
   // Social Particle
   .g-social {
+    text-align: right;
+    line-height: 3.125;
+
+    @include breakpoint(mobile-only) {
+      text-align: center;
+    }
+
+    .rtl & {
+      text-align: left;
+    }
+
+
     a {
       color: fadeout($white, 50%);
 
@@ -57,19 +69,6 @@
           color: $accent-color-1;
         }
       }
-    }
-  }
-
-  .g-social {
-    text-align: right;
-    line-height: 3.125;
-
-    @include breakpoint(mobile-only) {
-      text-align: center;
-    }
-
-    .rtl & {
-      text-align: left;
     }
   }
 

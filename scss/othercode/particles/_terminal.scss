@@ -13,6 +13,8 @@ div[id^="terminal-"] {
   position: relative;
   overflow: hidden;
   padding-top: 10px;
+  width: 90%;
+  margin: 5em auto 0 auto;
 
   .terminal-wrapper {
     border-top-right-radius: 10px;
@@ -141,6 +143,7 @@ div[id^="terminal-"] {
       pre {
         background-color: transparent;
         border: none;
+        overflow: hidden;
         @media all and (max-width: $breakpoints-large-mobile-container) {
           display: none;
         }
