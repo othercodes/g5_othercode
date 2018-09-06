@@ -12,6 +12,21 @@ defined('_JEXEC') or die('Restricted access');
 
 <div id="oc-simplecontactform" class="<?php echo $moduleclass_sfx ?>">
 
+    <?php if (!empty($alerts) && is_array($alerts)) : ?>
+        <div id="system-message-container">
+            <div id="system-message">
+                <?php foreach ($alerts as $alert) : ?>
+                    <div class="alert alert-<?php echo $alert['type']; ?>">
+                        <a class="close" data-dismiss="alert">×</a>
+                        <?php if (!empty($alert)) : ?>
+                            <p><?php echo $alert['message']; ?></p>
+                        <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    <?php endif; ?>
+
     <form id="oc-form" name="oc-form" method="post" enctype="multipart/form-data">
         <input type="hidden" name="send" value="<?php echo $instance; ?>">
         <?php echo JHtml::_('form.token'); ?>

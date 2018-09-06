@@ -25,6 +25,7 @@ a.muted:focus {
     background-color: lighten($warning-color, 41%);
     border-color: lighten($warning-color, 34%);
     padding: $content-padding;
+    border-radius: 0;
 
     a,
     a:hover,

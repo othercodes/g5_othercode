@@ -1,4 +1,10 @@
 #system-message {
   margin: 0 auto;
   padding: 0;
+
+  .alert {
+    p {
+      margin: 0;
+    }
+  }
 }
