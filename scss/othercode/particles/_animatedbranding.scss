@@ -34,19 +34,25 @@ div[id^="animatedbranding-"] {
     -o-transform: translate(0%, -50%);
     transform: translate(0%, -50%);
     padding: 0 15px;
+
     @media all and (max-width: $breakpoints-large-mobile-container) {
       max-width: 100%;
       margin: -80px auto 0 auto;
     }
 
     h1, h2 {
-      text-transform: uppercase;
       word-wrap: break-word;
       -webkit-hyphens: auto;
       -moz-hyphens: auto;
       -ms-hyphens: auto;
       hyphens: auto;
+
+      span {
+        text-transform: capitalize;
+        color: $accent-color-1;
+      }
     }
+
     h1 {
       font-size: 4.3em;
       line-height: 80px;
@@ -54,24 +60,16 @@ div[id^="animatedbranding-"] {
         font-size: 2.5em;
         line-height: 1.2;
       }
-      span {
-        color: $accent-color-1;
-      }
     }
+
     h2 {
-      font-size: 2.5rem;
+      font-size: 2.0rem;
+
       @media all and (max-width: $breakpoints-large-mobile-container) {
         font-size: 1.5em;
         line-height: 1;
       }
-      span {
-        color: $accent-color-1;
-      }
     }
-    p {
-
-    }
-
   }
 
   .mouse-icon {

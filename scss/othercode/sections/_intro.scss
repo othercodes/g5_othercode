@@ -10,6 +10,12 @@
 
   @if $intro-background-image {
     background: url($intro-background-image) center center no-repeat;
+
+    @if $intro-background-parallax == 'enabled' {
+      background-attachment: fixed;
+      background-position: 0 0;
+    }
+
     background-size: cover;
 
     @if $intro-background-overlay == 'enabled' {
