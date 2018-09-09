@@ -15,23 +15,20 @@ $msgList = $displayData['msgList'];
 
 ?>
 <?php if (is_array($msgList) && !empty($msgList)) : ?>
-	<div id="system-message-container">
-		<div id="system-message">
-			<?php foreach ($msgList as $type => $msgs) : ?>
-				<div class="alert alert-<?php echo $type; ?>">
-					<?php // This requires JS so we should add it trough JS. Progressive enhancement and stuff. ?>
-					<a class="close" data-dismiss="alert">×</a>
-
-					<?php if (!empty($msgs)) : ?>
-						<h4 class="alert-heading"><?php echo JText::_($type); ?></h4>
-						<div>
-							<?php foreach ($msgs as $msg) : ?>
-								<p><?php echo $msg; ?></p>
-							<?php endforeach; ?>
-						</div>
-					<?php endif; ?>
-				</div>
-			<?php endforeach; ?>
-		</div>
-	</div>
+    <div id="system-message-container">
+        <div id="system-message">
+            <?php foreach ($msgList as $type => $msgs) : ?>
+                <div class="alert alert-<?php echo $type; ?>">
+                    <a class="close" data-dismiss="alert">×</a>
+                    <?php if (!empty($msgs)) : ?>
+                        <div>
+                            <?php foreach ($msgs as $msg) : ?>
+                                <p><?php echo $msg; ?></p>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
 <?php endif; ?>
