@@ -17,3 +17,9 @@
     font-size: 1.5rem;
   }
 }
+
+pre[class*="language-"] {
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+}
