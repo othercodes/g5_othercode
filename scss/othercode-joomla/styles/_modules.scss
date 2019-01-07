@@ -9,23 +9,31 @@
   .categories-module,
   .category-module,
   .latestusers,
+  .tagspopular ul,
   .unstyled {
     margin: 0;
     display: inline-block;
-    border: 1px solid $base-border-color;
-    padding: $content-padding ($content-padding * 2);
+    padding: $content-padding $content-padding;
 
     li {
+      padding-left: 1.3em;
+      line-height: 1.3rem;
       list-style-type: none;
       margin-left: 0;
-      padding-bottom: $content-padding;
       margin-bottom: $content-margin;
-      border-bottom: 1px solid $base-border-color;
 
       &:last-child {
         border-bottom: 0;
         padding-bottom: 0;
         margin-bottom: 0;
+      }
+
+      &::before {
+        content: "\f121";
+        font-family: FontAwesome;
+        display: inline-block;
+        margin-left: -1.3em;
+        width: 1.3em;
       }
     }
   }
@@ -74,6 +82,7 @@
 
     > .active {
       color: $base-background;
+
       span {
         &.divider {
           position: relative;
@@ -82,6 +91,7 @@
           height: 21px;
           line-height: 1.5;
           margin-top: 4px;
+
           &:before {
             text-align: center;
             font-family: FontAwesome;
@@ -114,6 +124,7 @@
 
     a {
       display: inline-block;
+
       &:hover {
         color: $base-background;
       }

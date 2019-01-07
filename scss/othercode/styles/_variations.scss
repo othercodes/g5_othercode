@@ -53,7 +53,7 @@ $css_multipliers: 2, 3;
 // General
 .title1, .title2, .title3, .title-gradient, .title-outline {
   .g-title {
-    margin: -($content-padding) -($content-padding) 1.5rem -($content-padding);
+    margin: -($content-padding) -($content-padding) 1.3rem -($content-padding);
     padding: 0 1rem;
   }
 }
@@ -153,6 +153,23 @@ $css_multipliers: 2, 3;
     color: $white;
   }
 
+  .nav.menu,
+  .mostread,
+  .latestnews,
+  .archive-module,
+  .relateditems,
+  .categories-module,
+  .category-module,
+  .latestusers,
+  .tagspopular ul,
+  .unstyled {
+    li {
+      &::before {
+        color: lighten($box1-background, 30%);
+      }
+    }
+  }
+
   .button {
     color: $white;
 
@@ -196,6 +213,23 @@ $css_multipliers: 2, 3;
   &.moduletable, &.widget,
   > .g-content {
     color: $white;
+  }
+
+  .nav.menu,
+  .mostread,
+  .latestnews,
+  .archive-module,
+  .relateditems,
+  .categories-module,
+  .category-module,
+  .latestusers,
+  .tagspopular ul,
+  .unstyled {
+    li {
+      &::before {
+        color: lighten($box2-background, 30%);
+      }
+    }
   }
 
   .button {
@@ -242,6 +276,23 @@ $css_multipliers: 2, 3;
   &.moduletable, &.widget,
   > .g-content {
     color: $white;
+  }
+
+  .nav.menu,
+  .mostread,
+  .latestnews,
+  .archive-module,
+  .relateditems,
+  .categories-module,
+  .category-module,
+  .latestusers,
+  .tagspopular ul,
+  .unstyled {
+    li {
+      &::before {
+        color: lighten($box3-background, 30%);
+      }
+    }
   }
 
   .button {
