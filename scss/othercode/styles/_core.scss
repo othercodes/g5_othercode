@@ -3,6 +3,7 @@ body {
   background: $base-background;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
+  position: relative;
 
   *::selection {
     color: $white;

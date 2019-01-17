@@ -7,6 +7,9 @@
 
   @if $showcase-background-image {
     background: url($showcase-background-image) no-repeat center center;
+    &.full-screen {
+      height: 100vh;
+    }
 
     @if $showcase-background-parallax == 'enabled' {
       background-attachment: fixed;
@@ -61,6 +64,7 @@
       }
     }
   }
+
   .fp-showcase {
 
     .g-title {

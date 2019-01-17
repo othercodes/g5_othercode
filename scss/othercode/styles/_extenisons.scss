@@ -3,6 +3,14 @@
   #comment {
     min-height: 163px;
   }
+
+  .g-recaptcha div {
+    margin: auto;
+  }
+
+  #captcha-lbl {
+    display: none;
+  }
 }
 
 // custom google maps module
