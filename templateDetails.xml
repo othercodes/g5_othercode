@@ -16,6 +16,7 @@
         <folder>admin</folder>
         <folder>blueprints</folder>
         <folder>config</folder>
+        <folder>css</folder>
         <folder>fields</folder>
         <folder>fonts</folder>
         <folder>gantry</folder>
@@ -27,8 +28,8 @@
         <folder>language</folder>
         <folder>layouts</folder>
         <folder>particles</folder>
-        <folder>scss</folder>
         <folder>roksprocket</folder>
+        <folder>scss</folder>
         <file>component.php</file>
         <file>error.php</file>
         <file>index.php</file>
@@ -56,4 +57,9 @@
         </fields>
     </config>
 
+    <updateservers>
+        <server name="OtherCode Extension Directory" priority="1" type="collection">
+            https://updates.othercode.es/index.xml
+        </server>
+    </updateservers>
 </extension>
