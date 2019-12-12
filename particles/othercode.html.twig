@@ -6,11 +6,6 @@
         <script type="text/javascript">
             jQuery(document).ready(function () {
 
-                jQuery('.full-screen').height(jQuery(window).height());
-                jQuery(window).resize(function () {
-                    jQuery('.full-screen').height(jQuery(window).height());
-                });
-
                 jQuery('a[href^="#"]').on('click', function (e) {
                     e.preventDefault();
 

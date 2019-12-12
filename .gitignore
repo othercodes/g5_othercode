@@ -1,5 +1,6 @@
 .idea/
-builds/
+_builds/*
+_src/*
 custom/
 *pexels*
 *wallhaven*

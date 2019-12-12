@@ -1,0 +1,20 @@
+#console {
+
+  section {
+    padding: 0 0.5em !important;
+  }
+
+  .g-joomla-articles {
+    &.g-content-array {
+      margin: auto 0;
+    }
+    img {
+      display: none;
+    }
+
+    .button {
+      margin: auto;
+      padding: 0;
+    }
+  }
+}

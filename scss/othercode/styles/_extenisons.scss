@@ -3,19 +3,19 @@
   #comment {
     min-height: 163px;
   }
+
+  .g-recaptcha div {
+    margin: auto;
+  }
+
+  #captcha-lbl {
+    display: none;
+  }
 }
 
 // custom google maps module
 .gmaps {
   line-height: 0;
-}
-
-// roksprokect
-.sprocket-mosaic {
-  h2.sprocket-mosaic-title {
-    line-height: 2rem;
-    font-size: 1.5rem;
-  }
 }
 
 pre[class*="language-"] {

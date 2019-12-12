@@ -1,4 +1,19 @@
 .g-offline {
+
+  #g-showcase {
+    .g-content {
+
+      h2.g-title {
+        font-size: 3.5rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+    }
+  }
+
   #g-header {
     .g-content {
       padding: 3.5rem $content-padding;
@@ -38,12 +53,13 @@
 
   #g-footer {
     .g-content {
-      // To Top
+
       .g-totop {
         text-align: center;
       }
     }
   }
+
   #grav-login {
     max-width: 36rem;
     .form-actions {
@@ -62,6 +78,16 @@
         float: none;
         display: block;
       }
+    }
+  }
+
+  #frame.outline {
+    h1 {
+      line-height: 50px;
+    }
+
+    #submit-buton {
+      text-align: center;
     }
   }
 }

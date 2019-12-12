@@ -12,21 +12,6 @@ defined('_JEXEC') or die('Restricted access');
 
 <div id="oc-simplecontactform" class="<?php echo $moduleclass_sfx ?>">
 
-    <?php if (!empty($alerts) && is_array($alerts)) : ?>
-        <div id="system-message-container">
-            <div id="system-message">
-                <?php foreach ($alerts as $alert) : ?>
-                    <div class="alert alert-<?php echo $alert['type']; ?>">
-                        <a class="close" data-dismiss="alert">×</a>
-                        <?php if (!empty($alert)) : ?>
-                            <p><?php echo $alert['message']; ?></p>
-                        <?php endif; ?>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    <?php endif; ?>
-
     <?php if (!empty($prevtext)) { ?>
         <div class="oc-prev-text"><?php echo $prevtext; ?></div>
     <?php } ?>
@@ -92,6 +77,16 @@ defined('_JEXEC') or die('Restricted access');
                           required></textarea>
             </div>
         <?php } ?>
+
+        <?php if ($captchaEnabled) { ?>
+            <div class="g-block size-100">
+                <div class="control-group">
+                    <?php echo $form->renderField('captcha'); ?>
+                </div>
+
+            </div>
+        <?php } ?>
+
         <?php if (!empty($nexttext)) { ?>
             <div class="oc-next-text"><?php echo $nexttext; ?></div>
         <?php } ?>

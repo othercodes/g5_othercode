@@ -1,4 +1,4 @@
-# tpl_othercode
+# otherCode Joomla 3.x Template
 
 otherCode Joomla Template developed with Gantry 5
 
@@ -9,7 +9,13 @@ otherCode Joomla Template developed with Gantry 5
 Run the following command:
 
 ```bash
-sh ./tpl_othercode.sh
+bash build.sh
+```
+
+This will generate the installable `.zip` in `builds/` directory:
+
+```bash
+builds/g5_othercode.zip
 ```
 
 ## Configuration
@@ -18,4 +24,4 @@ Access to template configuration in: **Extensions > Template > Styles > [Templat
 
 #### Disclaimer
 
-All used images are from **pexels.com**.
+All used images are from **[pexels.com](https://www.pexels.com/)**.
