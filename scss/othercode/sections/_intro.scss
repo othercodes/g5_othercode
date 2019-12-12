@@ -44,6 +44,31 @@
     }
   }
 
+  h1 {
+    font-weight: 300;
+    line-height: $core-line-height;
+
+    @include breakpoint(large-mobile-range) {
+      font-size: 1.40rem;
+    }
+
+    em {
+      font-weight: $font-weight-medium;
+    }
+
+    &.large-heading {
+      font-size: $h1-font-size * 2;
+
+      @include breakpoint(tablet-range) {
+        font-size: $h1-font-size * 1.25;
+      }
+
+      @include breakpoint(mobile-only) {
+        font-size: $h1-font-size;
+      }
+    }
+  }
+
   h2 {
     font-weight: 300;
     line-height: $core-line-height;
