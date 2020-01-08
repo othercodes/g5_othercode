@@ -52,7 +52,7 @@
 @import "othercode/sections/utility";
 // Above
 @import "othercode/sections/above";
-// Testimonials
+// Bottom
 @import "othercode/sections/bottom";
 // Expanded
 @import "othercode/sections/below";
@@ -60,6 +60,12 @@
 @import "othercode/sections/main";
 // Sidebar
 @import "othercode/sections/sidebar";
+// Slide
+@import "othercode/sections/slide";
+// Banner
+@import "othercode/sections/banner";
+// Testimonials
+@import "othercode/sections/testimonials";
 // Footer
 @import "othercode/sections/footer";
 // Copyright
@@ -95,6 +101,12 @@
 @import "othercode/particles/gauge";
 @import "othercode/particles/progressbar";
 @import "othercode/particles/terminal";
+@import "othercode/particles/audioplayer";
+@import "othercode/particles/gridstatistic";
+@import "othercode/particles/heading";
+@import "othercode/particles/infolist";
+@import "othercode/particles/pricingtable";
+@import "othercode/particles/video";
 //-------------------------------------------
 // BREAKPOINTS
 @import "nucleus/theme/breakpoints/base";

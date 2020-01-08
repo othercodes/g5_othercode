@@ -71,12 +71,30 @@ $main-text-color:                #444444 !default;
 $below-background:                #ffffff !default;
 $below-text-color:                #444444 !default;
 
+// Banner
+$banner-background:                #ffffff !default;
+$banner-text-color:                #444444 !default;
+$banner-background-image:          false !default;
+$banner-background-overlay:        false !default;
+$banner-background-parallax:       false !default;
+
+// Slide
+$slide-background:                #ffffff !default;
+$slide-text-color:                #444444 !default;
+
 // Bottom
 $bottom-background:                #ffffff !default;
 $bottom-text-color:                #444444 !default;
 $bottom-background-image:          false !default;
 $bottom-background-overlay:        false !default;
 $bottom-background-parallax:       false !default;
+
+// Testimonials
+$testimonials-background:                #ffffff !default;
+$testimonials-text-color:                #444444 !default;
+$testimonials-background-image:          false !default;
+$testimonials-background-overlay:        false !default;
+$testimonials-background-parallax:       false !default;
 
 // Footer
 $footer-background:               #3b3b3b !default;
