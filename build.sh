@@ -2,7 +2,7 @@
 
 ext_path=$(pwd)
 ext_name="g5_othercode"
-version="1.1.3"
+version=$(cat VERSION)
 
 echo "**********************"
 echo "Building: ${ext_name}"
