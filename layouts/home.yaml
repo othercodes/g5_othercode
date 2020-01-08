@@ -14,9 +14,12 @@ layout:
   /above/: {  }
   /main/: {  }
   /below/: {  }
+  /banner/: {  }
+  /slide/: {  }
   /bottom/: {  }
+  /testimonials/: {  }
   /footer/: {  }
-  /maps/: { }
+  /maps/: {  }
   copyright: {  }
   offcanvas: {  }
 structure:
@@ -63,7 +66,19 @@ structure:
     type: section
     attributes:
       boxed: ''
+  banner:
+    type: section
+    attributes:
+      boxed: ''
+  slide:
+    type: section
+    attributes:
+      boxed: ''
   bottom:
+    type: section
+    attributes:
+      boxed: ''
+  testimonials:
     type: section
     attributes:
       boxed: ''
